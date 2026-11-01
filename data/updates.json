@@ -1,5 +1,152 @@
 [
   {
+    "id": "browser-run-chrome152-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "Browser Runの既定ブラウザーがChrome 152に",
+    "summaryJa": "既定のChromeが152に更新され、Quick ActionsのUser-Agentも変更されました。User-Agentを条件にする許可ルールは見直しが必要です。",
+    "serviceIds": [
+      "browser-run"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-chrome-152/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "d1-query-result-50mb-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "D1がクエリ結果に50MBの上限を導入",
+    "summaryJa": "2026年11月4日から50MBを超えるクエリ結果はエラーになります。REST APIによるインポート・エクスポートは対象外です。",
+    "serviceIds": [
+      "d1"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-query-result-size-limit/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "dns-classic-records-retired-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "DNSレコード管理画面が新UIに統一",
+    "summaryJa": "全プランで新しいDNSレコード画面が既定となり、旧画面は廃止されました。新画面では既存レコードの種別変更にも対応しています。",
+    "serviceIds": [
+      "dns"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-classic-dns-records-page-retired/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "durable-objects-deferred-update-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "Durable Objectsのコード更新が既定で遅延適用に",
+    "summaryJa": "稼働中のDurable Objectはデプロイ後も既定で最大300秒間旧コードを実行できます。即時適用も指定可能ですが、遅延はベストエフォートです。",
+    "serviceIds": [
+      "durable-objects",
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-durable-objects-deferred-code-updates/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "waf-nuxt-image-emergency-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "WAFにNuxt Image・IPX向け緊急検知ルールを追加",
+    "summaryJa": "Nuxt ImageとIPXの脆弱性に対する部分的な検知ルールが追加されました。既定では無効のため、公式の修正案内を確認してアプリを更新してください。",
+    "serviceIds": [
+      "waf"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-emergency-waf-release/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "workers-byoip-context-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "BYOIP宛てのサブリクエストでWorkersコンテキストを維持",
+    "summaryJa": "BYOIPを使うCloudflareプロキシ宛てのWorkersサブリクエストで、Workersコンテキストと元の利用者に関するBot判定情報が維持されます。ゾーン間通信のCF-Connecting-IPにはWorkers用のIPが設定されます。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-byoip-workers-subrequest-context/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "agents-file-skills-breaking-20261029",
+    "publishedAt": "2026-10-29",
+    "titleJa": "Agents SDKのSkill読み込み方式がファイル中心に変更",
+    "summaryJa": "Agent SkillsをWorkspaceやR2上のSKILL.mdから読み込めます。旧agents/skillsの一部APIは削除され、Agents SDK v0.32.0以降への移行が必要です。",
+    "serviceIds": [
+      "agents",
+      "r2"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-29-agent-skills-from-files/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "access-mcp-analytics-status-20261028",
+    "publishedAt": "2026-10-28",
+    "titleJa": "AccessのMCP分析APIが成功呼び出しのみを既定集計",
+    "summaryJa": "MCPツール呼び出し分析APIの既定集計がsuccessのみになりました。従来どおり失敗やキャッシュも含めるにはresponse_status=allを指定します。",
+    "serviceIds": [
+      "access"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-mcp-analytics-response-status/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "workers-builds-90day-logs-20261028",
+    "publishedAt": "2026-10-28",
+    "titleJa": "Workers Buildsのビルド履歴・ログ保持が90日間に",
+    "summaryJa": "ビルド履歴とログは完了から90日で削除されます。長期保管が必要な場合は期限前に取得してください。デプロイ済みバージョンの履歴は残ります。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-workers-builds-90-day-retention/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "workers-static-assets-basepath-20261028",
+    "publishedAt": "2026-10-28",
+    "titleJa": "Workers Static Assetsで配信URLのプレフィックスを指定可能に",
+    "summaryJa": "Wrangler 4.148.0以降でassets.base_pathを設定すると、ディレクトリ構造を変更せず指定したURLパス配下から静的ファイルを配信できます。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-static-assets-base-path/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "workflows-jurisdiction-20261027",
+    "publishedAt": "2026-10-27",
+    "titleJa": "Workflowsが実行・保存先の管轄地域指定に対応",
+    "summaryJa": "Workflow作成時にEU・米国・FedRAMPの管轄地域を指定できます。作成後は変更できず、既存設定と異なるデプロイは拒否されます。Wrangler 4.152.0以降が必要です。",
+    "serviceIds": [
+      "workflows",
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-27-workflow-jurisdictions/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "dns-advanced-nameservers-type-20261026",
+    "publishedAt": "2026-10-26",
+    "titleJa": "Advanced NameserversのDNS設定APIに新しいtype値",
+    "summaryJa": "DNS設定APIでnameservers.typeのcloudflare.advancedが段階的に導入されました。foundation_dnsは互換用の非推奨項目となり、列挙値を固定したAPIクライアントは対応が必要です。",
+    "serviceIds": [
+      "dns"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-26-foundation-dns-nameserver-type/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
     "id": "waf-brotli-nextjs-emergency-20261025",
     "publishedAt": "2026-10-25",
     "titleJa": "WAFにBrotli関連脆弱性の検知ルールを追加",
@@ -36,28 +183,17 @@
     "verifiedAt": "2026-10-26"
   },
   {
-    "id": "warp-windows-beta-20261022",
-    "publishedAt": "2026-10-22",
-    "titleJa": "Windows版Cloudflare One ClientのBeta v2026.9.1555.1",
-    "summaryJa": "Global Accelerationの接続先自動選択、管理者コードによる不正なアンインストール防止、MTU関連の改善などがBeta版に追加されました。",
+    "id": "workers-pages-emudhra-build-certs-20261023",
+    "publishedAt": "2026-10-23",
+    "titleJa": "Workers Builds・Pagesのビルド環境が不正なCA証明書を拒否",
+    "summaryJa": "侵害されたeMudhra中間CAを信頼しないビルドイメージに更新されました。古いBunや独自CA設定を指定している場合は、証明書の信頼設定を確認してください。",
     "serviceIds": [
-      "warp-client"
+      "workers",
+      "pages"
     ],
     "type": "service-update",
-    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-22-warp-windows-beta/",
-    "verifiedAt": "2026-10-26"
-  },
-  {
-    "id": "warp-macos-beta-20261022",
-    "publishedAt": "2026-10-22",
-    "titleJa": "macOS版Cloudflare One ClientのBeta v2026.9.1555.1",
-    "summaryJa": "このBeta版の最低対応OSはmacOS 15.0となり、macOS 14では動作しません。Global Accelerationや接続診断も改善されました。",
-    "serviceIds": [
-      "warp-client"
-    ],
-    "type": "service-update",
-    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-22-warp-macos-beta/",
-    "verifiedAt": "2026-10-26"
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-23-build-images-emudhra-certificates/",
+    "verifiedAt": "2026-11-02"
   },
   {
     "id": "agents-mcp-sse-retirement-20261022",
@@ -122,6 +258,30 @@
     "verifiedAt": "2026-10-26"
   },
   {
+    "id": "warp-macos-beta-20261022",
+    "publishedAt": "2026-10-22",
+    "titleJa": "macOS版Cloudflare One ClientのBeta v2026.9.1555.1",
+    "summaryJa": "このBeta版の最低対応OSはmacOS 15.0となり、macOS 14では動作しません。Global Accelerationや接続診断も改善されました。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-22-warp-macos-beta/",
+    "verifiedAt": "2026-10-26"
+  },
+  {
+    "id": "warp-windows-beta-20261022",
+    "publishedAt": "2026-10-22",
+    "titleJa": "Windows版Cloudflare One ClientのBeta v2026.9.1555.1",
+    "summaryJa": "Global Accelerationの接続先自動選択、管理者コードによる不正なアンインストール防止、MTU関連の改善などがBeta版に追加されました。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-22-warp-windows-beta/",
+    "verifiedAt": "2026-10-26"
+  },
+  {
     "id": "agents-createai-20261021",
     "publishedAt": "2026-10-21",
     "titleJa": "Agents SDKにcreateAIを追加し旧Providerを非推奨化",
@@ -148,18 +308,6 @@
     "verifiedAt": "2026-10-26"
   },
   {
-    "id": "waf-managed-emergency-20261021",
-    "publishedAt": "2026-10-21",
-    "titleJa": "Cloudflare Managed Rulesetに異常実行検知ルール7件を追加",
-    "summaryJa": "WAFのCloudflare Managed Rulesetに異常な実行パターンを検知してBlockする7件のルールが追加されました。",
-    "serviceIds": [
-      "waf"
-    ],
-    "type": "service-update",
-    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-21-emergency-waf-release-cfmr/",
-    "verifiedAt": "2026-10-26"
-  },
-  {
     "id": "waf-free-emergency-20261021",
     "publishedAt": "2026-10-21",
     "titleJa": "Cloudflare Free Rulesetに異常実行遮断ルール7件を追加",
@@ -172,15 +320,27 @@
     "verifiedAt": "2026-10-26"
   },
   {
-    "id": "warp-windows-client-2026-10-20",
+    "id": "waf-managed-emergency-20261021",
+    "publishedAt": "2026-10-21",
+    "titleJa": "Cloudflare Managed Rulesetに異常実行検知ルール7件を追加",
+    "summaryJa": "WAFのCloudflare Managed Rulesetに異常な実行パターンを検知してBlockする7件のルールが追加されました。",
+    "serviceIds": [
+      "waf"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-21-emergency-waf-release-cfmr/",
+    "verifiedAt": "2026-10-26"
+  },
+  {
+    "id": "warp-linux-client-2026-10-20",
     "publishedAt": "2026-10-20",
-    "titleJa": "Cloudflare One Client for Windows v2026.8.2115.0",
-    "summaryJa": "Windows版クライアントが更新され、信頼済み証明書チェーンに関する問題が修正されました。",
+    "titleJa": "Cloudflare One Client for Linux v2026.8.2115.0",
+    "summaryJa": "Linux版クライアントが更新され、信頼済み証明書チェーンに関する問題が修正されました。",
     "serviceIds": [
       "warp-client"
     ],
     "type": "service-update",
-    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-20-warp-windows-ga/",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-20-warp-linux-ga/",
     "verifiedAt": "2026-10-20"
   },
   {
@@ -196,15 +356,15 @@
     "verifiedAt": "2026-10-20"
   },
   {
-    "id": "warp-linux-client-2026-10-20",
+    "id": "warp-windows-client-2026-10-20",
     "publishedAt": "2026-10-20",
-    "titleJa": "Cloudflare One Client for Linux v2026.8.2115.0",
-    "summaryJa": "Linux版クライアントが更新され、信頼済み証明書チェーンに関する問題が修正されました。",
+    "titleJa": "Cloudflare One Client for Windows v2026.8.2115.0",
+    "summaryJa": "Windows版クライアントが更新され、信頼済み証明書チェーンに関する問題が修正されました。",
     "serviceIds": [
       "warp-client"
     ],
     "type": "service-update",
-    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-20-warp-linux-ga/",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-20-warp-windows-ga/",
     "verifiedAt": "2026-10-20"
   },
   {
@@ -326,18 +486,6 @@
     ],
     "type": "service-update",
     "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-14-workers-builds-default-tooling/",
-    "verifiedAt": "2026-10-20"
-  },
-  {
-    "id": "workers-byoip-context-20261013",
-    "publishedAt": "2026-10-13",
-    "titleJa": "BYOIP宛てのサブリクエストでWorkersコンテキストを維持",
-    "summaryJa": "CloudflareがプロキシするBYOIPホスト宛てのWorkersサブリクエストで、CF-Workerヘッダーとcf.worker.upstream_zoneが維持されるようになりました。",
-    "serviceIds": [
-      "workers"
-    ],
-    "type": "service-update",
-    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-13-byoip-workers-subrequest-context/",
     "verifiedAt": "2026-10-20"
   },
   {

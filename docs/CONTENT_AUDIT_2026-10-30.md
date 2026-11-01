@@ -1,16 +1,16 @@
 # 掲載本文の著作権・原典照合台帳 — Issue #10
 
 作成日: 2026-10-30  
-対象: `data/services.json` 61件の `summaryJa`・`descriptionJa`、`data/updates.json` 29件の `titleJa`・`summaryJa`。
+対象: `data/services.json` 61件の `summaryJa`・`descriptionJa`、`data/updates.json` 41件の `titleJa`・`summaryJa`。
 
 **本台帳は一次スクリーニングであり、著作権侵害がないとの最終判断やライセンスの個別許諾確認を意味しない。** 公式資料の語順・説明構成まで対照できていない場合、判定は「一次確認」に留める。**「一次確認」を「独自要約で問題なし」や監査完了と同一視しない。**
 
 ## 今回の作業結果
 
-- 公式の登録先URLへのアクセス結果: サービス61/61件、更新28/29件の本文ページを取得。更新1件は404（`workers-byoip-context-20261013`）。
-- **詳細対照: 28件** — 公式本文の記述を見ながら日本語見出し・要約と照合。特定の専門用語、版数、変更日時といった事実のみを扱い、元資料の具体的な例示や構成を持ち込まないようチェック。
+- 公式の登録先URLへのアクセス結果: サービス61/61件、更新41/41件の本文ページを確認。旧404記事は2026-10-30公開の公式記事で内容・公開日・URLを再確認して訂正。
+- **詳細対照: 41件** — 公式本文の記述を見ながら日本語見出し・要約と照合。特定の専門用語、版数、変更日時といった事実のみを扱い、元資料の具体的な例示や構成を持ち込まないようチェック。
 - **一次確認（未完了）: 61件** — 公式ページを取得し、短い機能・変更の説明であることを確認。完全な表現・文の構造比較と権利帰属の検証は引き続き必要。
-- **要原典再確認: 1件** — 公式の参照URLが404。関連する二次情報の存在だけでは原典の検証・再利用条件の確証にはならない。
+- **要原典再確認: 0件** — 前回404だったBYOIP記事の公式原典を再確認済み。
 - URLを開けたことや公式情報と一致する事実が存在することは、元の創作的な文章を翻案してもよいという許諾ではない。
 - 確認済みページにもURLリダイレクトがある。例: Browser Rendering→Browser Run、Page Shield→Client-side security、Cloudflare One旧Docsパス。これらは今回の著作権調査ではリンク切れ扱いにしない。製品名・URLの変更は別の根拠確認を要する。
 
@@ -28,7 +28,7 @@
 
 `LICENSE`には `Copyright (c) 2026 脱力（datsuryoku）` とある。公開`main`のGitコミット（直近7件）はGitHubユーザー `yuuzin217` に紐づく作者名 `脱力（datsuryoku）` であり、**表記の不一致は現時点では検出していない**。ただし、コミットの名義と著作権の実際の帰属・第三者素材の適用条件は別問題。元データ・UIの制作経緯、他者の寄稿・転載素材の有無は依然未確認であり、**権利者の合意なくLICENSEを書き換えない**。外部由来の原文を当リポジトリのMITに包含することはしない。
 
-## 個別一覧（90件）
+## 個別一覧（102件）
 
 列の出典URLは監査対象JSONの記録値と一致させる。ページの取得確認は2026-10-30時点のもので、将来のHTTP 200を保証しない。
 
@@ -95,6 +95,18 @@
 | service | `images` | https://developers.cloudflare.com/images/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `stream` | https://developers.cloudflare.com/stream/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `realtime` | https://developers.cloudflare.com/realtime/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
+| update | `d1-query-result-50mb-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-query-result-size-limit/ | 詳細対照 | 50MB制限の開始日・エラー・REST API例外を照合。 |
+| update | `durable-objects-deferred-update-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-durable-objects-deferred-code-updates/ | 詳細対照 | 既定300秒の遅延適用とベストエフォートの条件を照合。 |
+| update | `waf-nuxt-image-emergency-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-emergency-waf-release/ | 詳細対照 | Nuxt Image/IPX向けルールが既定無効・部分的保護である点を照合。 |
+| update | `browser-run-chrome152-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-chrome-152/ | 詳細対照 | Chrome 152とQuick Actionsの既定User-Agent変更を照合。 |
+| update | `dns-classic-records-retired-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-classic-dns-records-page-retired/ | 詳細対照 | 旧DNS画面の廃止と新画面のレコード種別変更を照合。 |
+| update | `agents-file-skills-breaking-20261029` | https://developers.cloudflare.com/changelog/post/2026-10-29-agent-skills-from-files/ | 詳細対照 | Skillファイル化と削除された旧API、移行対象のバージョンを照合。 |
+| update | `access-mcp-analytics-status-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-mcp-analytics-response-status/ | 詳細対照 | response_statusの既定値と従来集計を復元するall指定を照合。 |
+| update | `workers-static-assets-basepath-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-static-assets-base-path/ | 詳細対照 | 静的アセットのbase_path設定とWrangler最小バージョンを照合。 |
+| update | `workers-builds-90day-logs-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-workers-builds-90-day-retention/ | 詳細対照 | 90日間のログ保持とデプロイ履歴が残る点を照合。 |
+| update | `workflows-jurisdiction-20261027` | https://developers.cloudflare.com/changelog/post/2026-10-27-workflow-jurisdictions/ | 詳細対照 | 指定できる管轄地域、作成後の変更不可、Wrangler条件を照合。 |
+| update | `dns-advanced-nameservers-type-20261026` | https://developers.cloudflare.com/changelog/post/2026-10-26-foundation-dns-nameserver-type/ | 詳細対照 | APIの新しい列挙値と旧foundation_dnsの互換・非推奨を照合。 |
+| update | `workers-pages-emudhra-build-certs-20261023` | https://developers.cloudflare.com/changelog/post/2026-10-23-build-images-emudhra-certificates/ | 詳細対照 | eMudhra中間CAの拒否と古いランタイム・独自CA設定への注意を照合。 |
 | update | `waf-brotli-nextjs-emergency-20261025` | https://developers.cloudflare.com/changelog/post/2026-10-25-emergency-waf-release/ | 詳細対照 | CVE番号、Log既定、既存Block上書きの影響を原典本文と照合。具体的なリスクを事実中心に編集。 |
 | update | `d1-undelete-seven-days-20261023` | https://developers.cloudflare.com/changelog/post/2026-10-23-undelete-seven-day-window/ | 詳細対照 | 7日制限の条件と削除後の復元可否を原典本文と照合。機能変更の事実のみ記述。 |
 | update | `workers-builds-package-manager-20261023` | https://developers.cloudflare.com/changelog/post/2026-10-23-workers-builds-pin-npm-version/ | 詳細対照 | packageManagerによるnpm固定と対象パッケージマネージャーを記事本文で照合。コード例は転載せず簡潔化。 |
@@ -122,14 +134,14 @@
 | update | `tunnels-platforms-50000-routes-2026-10-16` | https://developers.cloudflare.com/changelog/post/2026-10-16-tunnels-for-platforms-and-50k-routes/ | 詳細対照 | デフォルト5万ルートとTunnels for Platformsを原典と照合。料金・上限の別数値は転載しない。 |
 | update | `gateway-workers-public-beta-20261015` | https://developers.cloudflare.com/changelog/post/2026-10-15-gateway-workers-public-beta/ | 詳細対照 | Gateway HTTPポリシーからWorkersへのForward連携および全Zero Trustプラン対象を原典と照合。 |
 | update | `workers-build-tooling-20261014` | https://developers.cloudflare.com/changelog/post/2026-10-14-workers-builds-default-tooling/ | 詳細対照 | 既定ツールチェーンのバージョン更新、個別指定による上書きを原典の表と照合。表は転載しない。 |
-| update | `workers-byoip-context-20261013` | https://developers.cloudflare.com/changelog/post/2026-10-13-byoip-workers-subrequest-context/ | 要原典再確認 | 公式Changelogの指定URLが404。別の公式記事で公開日・事実を確証できず、原文比較不可。公開表示を確認済み扱いにしない。 |
+| update | `workers-byoip-context-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-byoip-workers-subrequest-context/ | 詳細対照 | 公式記事の公開日とURLを訂正。Workersコンテキスト・Bot判定・ゾーン間IPの事実を個別確認。 |
 | update | `workers-runtime-grace-period-20261012` | https://developers.cloudflare.com/changelog/post/2026-10-12-longer-runtime-update-grace-period/ | 詳細対照 | 最大20分の猶予およびWebSocketが途中切断され得る注意書きを原典本文と照合。 |
 
 ## 今後の実務
 
 1. **一次確認61件**: 公式原文の文章・段落構成（英語の逐語翻訳、比喩、具体的なユースケースの順番を含む）とJSONの個別フィールドを詳細に対照。必要なら記述をさらに短い独自の事実説明に書き換え、台帳の判定と根拠を更新する。
-2. **404の1件**: Cloudflare公式の元記事または同等の一次記録を見つけてURLと日付・内容を検証。見つからなければ、無理に公式リンクを別のページで代用しない。記事を残すか非掲載にするかは根拠に基づき判断する。
+2. **旧404記事**: 2026-10-30の公式記事で原典・公開日を確認し、カタログ側の掲載日・URLを訂正済み。
 3. **LICENSE著作権者**: Git履歴以外に第三者の寄稿・外部素材の取り込みがあるか、所有者に確認する。外部コードや文章があるなら個別のライセンスを保全する。
-4. **公開確認**: 詳細表示から各サービスの公式Docs、各Changelogへのリンクを確認する。404記事のリンクを「正常」と判定しない。
-5. **レビューゲート**: 90件がすべて詳細対照済みになり、要原典再確認0件、権利者確認が揃うまでIssue #10は閉じない。新しい掲載文を追加・更新した場合は台帳の判定を再評価する。
+4. **公開確認**: 詳細表示から各サービスの公式Docs、各Changelogへのリンクを確認する。
+5. **レビューゲート**: 102件がすべて詳細対照済みになり、要原典再確認0件、権利者確認が揃うまでIssue #10は閉じない。新しい掲載文を追加・更新した場合は台帳の判定を再評価する。
 
