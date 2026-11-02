@@ -95,6 +95,21 @@
 | service | `images` | https://developers.cloudflare.com/images/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `stream` | https://developers.cloudflare.com/stream/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `realtime` | https://developers.cloudflare.com/realtime/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
+| update | `browser-run-chrome-152-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-chrome-152/ | 詳細対照 | Chrome 152への更新と既定User-Agentの変更、Quick Actions改善を原典本文と照合。事実のみを独自の短文で記述し、公式表現は転載しない。 |
+| update | `d1-query-result-50mb-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-query-result-size-limit/ | 詳細対照 | 2026-11-04適用の50MB上限、対象外のImport/Export、分割取得の必要性を原典本文と照合。エラーメッセージ等の原文は転載しない。 |
+| update | `durable-objects-deferred-code-updates-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-durable-objects-deferred-code-updates/ | 詳細対照 | 既定の遅延適用、最大5分の保持、即時適用の選択肢とベストエフォートの注意を原典本文と照合。設定コード例は転載しない。 |
+| update | `waf-nuxt-ipx-emergency-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-emergency-waf-release/ | 詳細対照 | Nuxt Image／IPX向け新規検知ルール、既定無効、部分的カバーと修正推奨を原典のルール表と照合。表は転載しない。 |
+| update | `magic-wan-regional-gateway-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-cloudflare-wan-regional-processing/ | 詳細対照 | WAN向けGateway処理リージョン、対象外の処理、アカウントチーム依頼の前提を原典本文と照合。事実のみを独自要約。 |
+| update | `dns-records-experience-default-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-classic-dns-records-page-retired/ | 詳細対照 | 新画面の全プラン既定化、旧画面の終了、レコード種類変更の対応を原典本文と照合。事実のみを独自要約。 |
+| update | `workers-byoip-context-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-byoip-workers-subrequest-context/ | 詳細対照 | 2026-10-30の一次確認で旧URL（2026-10-13版）の404を確認済みだった記事について、2026-11-02に同題の公式再公開記事を取得し、CF-Worker等の保持事実と別ゾーン時のCF-Connecting-IPの扱いを照合したため再評価。旧行は本行に置き換える。 |
+| update | `agents-skills-files-20261029` | https://developers.cloudflare.com/changelog/post/2026-10-29-agent-skills-from-files/ | 詳細対照 | Skillsのファイル化、読み込み元、破壊的変更と必要バージョンを原典本文と照合。コード例は転載せず事実のみ記述。 |
+| update | `agents-internal-hostnames-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-browser-internal-hostnames/ | 詳細対照 | 内部ホスト名による開発サーバープレビュー、対象の選択方法、必要バージョンを原典本文と照合。コード例は転載しない。 |
+| update | `china-network-native-challenge-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-china-native-challenge-pages/ | 詳細対照 | 本土ホストのTurnstileへの切替、自動適用で操作不要である点を原典本文と照合。事実のみを独自要約。 |
+| update | `workers-static-assets-base-path-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-static-assets-base-path/ | 詳細対照 | base_pathによる接頭辞配信と必要バージョンを原典本文と照合。設定コード例は転載しない。 |
+| update | `workers-vpc-virtual-network-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-virtual-network-bindings/ | 詳細対照 | バインディングごとの仮想ネットワーク指定と既定指定の継続を原典本文と照合。設定コード例は転載しない。 |
+| update | `access-custom-pages-20261027` | https://developers.cloudflare.com/changelog/post/2026-10-27-access-custom-pages/ | 詳細対照 | 対象4ページのテンプレート対応と割り当て方法を原典本文と照合。事実のみを独自要約し、画面画像は転載しない。 |
+| update | `workflows-jurisdiction-20261027` | https://developers.cloudflare.com/changelog/post/2026-10-27-workflow-jurisdictions/ | 詳細対照 | 対応する管轄地域、作成時決定で変更不可、必要バージョンを原典本文と照合。設定コード例は転載しない。 |
+| update | `agents-computer-recovery-20261026` | https://developers.cloudflare.com/changelog/post/2026-10-26-computer-durable-javascript/ | 詳細対照 | v0.7.0の中断後再開と承認待ち、再開時に呼び出しが繰り返され得る注意を原典本文と照合。コード例は転載しない。 |
 | update | `waf-brotli-nextjs-emergency-20261025` | https://developers.cloudflare.com/changelog/post/2026-10-25-emergency-waf-release/ | 詳細対照 | CVE番号、Log既定、既存Block上書きの影響を原典本文と照合。具体的なリスクを事実中心に編集。 |
 | update | `d1-undelete-seven-days-20261023` | https://developers.cloudflare.com/changelog/post/2026-10-23-undelete-seven-day-window/ | 詳細対照 | 7日制限の条件と削除後の復元可否を原典本文と照合。機能変更の事実のみ記述。 |
 | update | `workers-builds-package-manager-20261023` | https://developers.cloudflare.com/changelog/post/2026-10-23-workers-builds-pin-npm-version/ | 詳細対照 | packageManagerによるnpm固定と対象パッケージマネージャーを記事本文で照合。コード例は転載せず簡潔化。 |
@@ -122,7 +137,6 @@
 | update | `tunnels-platforms-50000-routes-2026-10-16` | https://developers.cloudflare.com/changelog/post/2026-10-16-tunnels-for-platforms-and-50k-routes/ | 詳細対照 | デフォルト5万ルートとTunnels for Platformsを原典と照合。料金・上限の別数値は転載しない。 |
 | update | `gateway-workers-public-beta-20261015` | https://developers.cloudflare.com/changelog/post/2026-10-15-gateway-workers-public-beta/ | 詳細対照 | Gateway HTTPポリシーからWorkersへのForward連携および全Zero Trustプラン対象を原典と照合。 |
 | update | `workers-build-tooling-20261014` | https://developers.cloudflare.com/changelog/post/2026-10-14-workers-builds-default-tooling/ | 詳細対照 | 既定ツールチェーンのバージョン更新、個別指定による上書きを原典の表と照合。表は転載しない。 |
-| update | `workers-byoip-context-20261013` | https://developers.cloudflare.com/changelog/post/2026-10-13-byoip-workers-subrequest-context/ | 要原典再確認 | 公式Changelogの指定URLが404。別の公式記事で公開日・事実を確証できず、原文比較不可。公開表示を確認済み扱いにしない。 |
 | update | `workers-runtime-grace-period-20261012` | https://developers.cloudflare.com/changelog/post/2026-10-12-longer-runtime-update-grace-period/ | 詳細対照 | 最大20分の猶予およびWebSocketが途中切断され得る注意書きを原典本文と照合。 |
 
 ## 今後の実務

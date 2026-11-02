@@ -1,5 +1,188 @@
 [
   {
+    "id": "browser-run-chrome-152-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "Browser Runの既定ブラウザがChrome 152に更新",
+    "summaryJa": "Browser Runの実行ブラウザが既定でChrome 152になった。Quick Actionsの既定User-AgentもChrome 152になるため、UAを許可条件にしている場合は更新が必要で、任意のUAは従来どおり指定できる。",
+    "serviceIds": [
+      "browser-run"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-chrome-152/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "d1-query-result-50mb-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "D1のクエリ結果サイズに50MB上限を2026-11-04から適用",
+    "summaryJa": "2026年11月4日から、結果が50MBを超えるD1クエリはエラーで失敗するようになる。REST API経由のインポート／エクスポートは対象外で、大きな結果は必要な列の絞り込みやLIMIT／OFFSETによる分割が求められる。",
+    "serviceIds": [
+      "d1"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-query-result-size-limit/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "durable-objects-deferred-code-updates-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "Durable Objectsのコード更新が既定で遅延適用に",
+    "summaryJa": "デプロイ時、動作中のDurable Objectは既定で最大5分間は現行コードを保ち、ハイバネーション後に新コードへ移るようになった。遅延時間は設定で変更でき、即時適用も選べるが、遅延適用はベストエフォートで完了を保証しない。",
+    "serviceIds": [
+      "durable-objects"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-durable-objects-deferred-code-updates/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "waf-nuxt-ipx-emergency-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "WAF緊急リリースでNuxt Image／IPX脆弱性の検知ルールを追加",
+    "summaryJa": "Managed RulesetにNuxt ImageとIPXの脆弱性を狙うリクエストの検知ルールが追加された。既定は無効でカバー範囲も部分的とされ、公式はアドバイザリに従った最新版への修正を求めている。",
+    "serviceIds": [
+      "waf"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-emergency-waf-release/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "magic-wan-regional-gateway-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "Cloudflare WANのGateway HTTP検査で処理リージョンを指定可能に",
+    "summaryJa": "WAN経由のHTTPSトラフィックを、選択したリージョンのGatewayでTLS復号とHTTP検査を行えるようになった。データの処理場所を管理したい組織向けで、設定はアカウントチームへの依頼が必要。GatewayのDNSやネットワークポリシー処理は対象外。",
+    "serviceIds": [
+      "magic-wan",
+      "gateway"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-cloudflare-wan-regional-processing/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "dns-records-experience-default-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "新しいDNSレコード画面が全ユーザーの既定になり旧画面は終了",
+    "summaryJa": "ダッシュボードの新しいDNSレコード管理画面が全プランで既定となり、従来の画面は利用できなくなった。既存レコードの種類変更も画面から行えるようになっている。",
+    "serviceIds": [
+      "dns"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-classic-dns-records-page-retired/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "workers-byoip-context-20261030",
+    "publishedAt": "2026-10-30",
+    "titleJa": "BYOIP宛てのサブリクエストでWorkersコンテキストを維持",
+    "summaryJa": "CloudflareがプロキシするBYOIPホスト宛てのWorkersサブリクエストで、CF-Workerヘッダーやcf.worker.upstream_zone、Bot Managementの評価情報が元の接続のものとして扱われるようになった。別ゾーン宛ての場合はCF-Connecting-IPがWorkersのクライアントIPに置き換わる。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-30-byoip-workers-subrequest-context/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "agents-skills-files-20261029",
+    "publishedAt": "2026-10-29",
+    "titleJa": "Agents SDKのAgent SkillsがWorkspace上のファイルに",
+    "summaryJa": "Agent Skillsは、エージェントのWorkspaceにSKILL.mdを含むフォルダを置く形に変わり、デプロイなしで次のターンから使えるようになった。R2やコードからも読み込める一方、従来のagents/skills直接利用は破壊的変更があり、Agents SDK v0.32.0以降への更新が必要。",
+    "serviceIds": [
+      "agents"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-29-agent-skills-from-files/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "agents-internal-hostnames-20261028",
+    "publishedAt": "2026-10-28",
+    "titleJa": "Agents SDKのブラウザで内部ホスト名による開発サーバープレビューが可能に",
+    "summaryJa": "エージェントのブラウザが、公開URLなしにコンテナ内の開発サーバーへ内部ホスト名でアクセスできるようになった。対象のポートやフォルダはモデル側で選べ、別のWorkerへサービスバインディング経由でつなぐこともできる。Agents SDK v0.31.0以降が必要。",
+    "serviceIds": [
+      "agents",
+      "browser-run"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-browser-internal-hostnames/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "china-network-native-challenge-20261028",
+    "publishedAt": "2026-10-28",
+    "titleJa": "China Networkのチャレンジページが中国本土ホストのTurnstileに",
+    "summaryJa": "China Network経由で表示されるチャレンジページでは、中国本土でホストされるTurnstileウィジェットが使われるようになった。利用者の操作は不要で自動で切り替わり、本土の訪問者は国境を越える通信なしにチャレンジを完了できる。",
+    "serviceIds": [
+      "china-network",
+      "turnstile"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-china-native-challenge-pages/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "workers-static-assets-base-path-20261028",
+    "publishedAt": "2026-10-28",
+    "titleJa": "Workers Static AssetsをURLパスの接頭辞から配信可能に",
+    "summaryJa": "静的アセットの配置ディレクトリを変えずに、/blog/ のようなパス接頭辞配下から配信できる設定が加わった。Wranglerではassets.base_pathで指定し、Wrangler 4.148.0以降が必要。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-static-assets-base-path/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "workers-vpc-virtual-network-20261028",
+    "publishedAt": "2026-10-28",
+    "titleJa": "WorkersのVPC Networkバインディングで仮想ネットワークを選択可能に",
+    "summaryJa": "VPC Networkバインディングごとに仮想ネットワークをIDで指定できるようになり、同じプライベートIPを使う別々のバックエンドへ1つのWorkerから接続し分けられる。既定の仮想ネットワークを使う場合は従来の指定を継続する。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-virtual-network-bindings/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "access-custom-pages-20261027",
+    "publishedAt": "2026-10-27",
+    "titleJa": "Accessの利用者向けページをHTMLテンプレートで全面カスタマイズ可能に",
+    "summaryJa": "ログイン、ID拒否、禁止、コマンドライン承認の各ページにHTMLとLiquidのテンプレートを使えるようになった。変数で利用者への案内やブロック理由を示せ、テンプレートはアプリケーション単位の割り当てやアカウント既定として設定できる。",
+    "serviceIds": [
+      "access"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-27-access-custom-pages/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "workflows-jurisdiction-20261027",
+    "publishedAt": "2026-10-27",
+    "titleJa": "Workflowsを実行・保存する管轄地域を制限可能に",
+    "summaryJa": "Workflowにeu、us、fedrampのいずれかの管轄地域を設定し、インスタンスの実行とデータ保存をその地域内に限定できるようになった。管轄地域は作成時に決まり後から変更できず、利用にはWrangler 4.152.0以降が必要。",
+    "serviceIds": [
+      "workflows"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-27-workflow-jurisdictions/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "id": "agents-computer-recovery-20261026",
+    "publishedAt": "2026-10-26",
+    "titleJa": "Cloudflare Computerの実行が中断後の再開と承認待ちに対応",
+    "summaryJa": "@cloudflare/computer v0.7.0から、エージェントのコード実行がデプロイや障害で中断しても記録済みの結果を使って再開できるようになり、外部の承認が必要な処理では実行を一時停止して判断を待てるようになった。再開時に未記録の呼び出しが繰り返される場合がある点に注意が必要。",
+    "serviceIds": [
+      "agents"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-26-computer-durable-javascript/",
+    "verifiedAt": "2026-11-02"
+  },
+  {
     "id": "waf-brotli-nextjs-emergency-20261025",
     "publishedAt": "2026-10-25",
     "titleJa": "WAFにBrotli関連脆弱性の検知ルールを追加",
@@ -326,18 +509,6 @@
     ],
     "type": "service-update",
     "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-14-workers-builds-default-tooling/",
-    "verifiedAt": "2026-10-20"
-  },
-  {
-    "id": "workers-byoip-context-20261013",
-    "publishedAt": "2026-10-13",
-    "titleJa": "BYOIP宛てのサブリクエストでWorkersコンテキストを維持",
-    "summaryJa": "CloudflareがプロキシするBYOIPホスト宛てのWorkersサブリクエストで、CF-Workerヘッダーとcf.worker.upstream_zoneが維持されるようになりました。",
-    "serviceIds": [
-      "workers"
-    ],
-    "type": "service-update",
-    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-13-byoip-workers-subrequest-context/",
     "verifiedAt": "2026-10-20"
   },
   {
