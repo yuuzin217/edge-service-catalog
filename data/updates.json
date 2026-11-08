@@ -1,5 +1,222 @@
 [
   {
+    "id": "ai-gateway-provider-key-activity-20261106",
+    "publishedAt": "2026-11-06",
+    "titleJa": "AI Gatewayでプロバイダーキーの利用状況を確認可能に",
+    "summaryJa": "AI GatewayのProvider Keys画面で、保存したプロバイダーキーの最終利用日や更新日を確認できるようになった。90日を超えて記録のあるキーはKey securityで目立つよう表示され、依存関係を確認したうえでの更新や削除の判断に使える。利用状況の記録は2026年11月から始まる。",
+    "serviceIds": [
+      "ai-gateway"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-06-provider-key-security/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "access-passkeys-20261106",
+    "publishedAt": "2026-11-06",
+    "titleJa": "Accessのログインにパスキーが対応",
+    "summaryJa": "Cloudflare Accessで、端末やセキュリティキー、パスワードマネージャーに保存したパスキーで保護対象アプリやApp Launcherへログインできるようになった。登録には既存の方法での本人確認が一度必要で、どのアプリで許可するかや登録済みパスキーの削除は管理者が決める。アクセス可否は従来どおりAccessポリシーで判定される。",
+    "serviceIds": [
+      "access"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-06-access-passkeys/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "workers-ai-model-deprecations-20261105",
+    "publishedAt": "2026-11-05",
+    "titleJa": "Workers AIの一部モデルが2026-11-20で提供終了",
+    "summaryJa": "Workers AIで一部のLLMや音声・画像などのモデルが2026年11月20日に廃止され、以降はHTTP 410（エラーコード5028）で失敗するようになる。当初予定の11月15日から延期されたもので、対象モデルを使っている場合は期限までに後継モデルへ移す必要がある。",
+    "serviceIds": [
+      "workers-ai"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-05-planned-model-deprecations/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "durable-objects-automatic-retries-20261105",
+    "publishedAt": "2026-11-05",
+    "titleJa": "Durable Objectsへの呼び出しをランタイムが自動で再試行",
+    "summaryJa": "Durable Objectへ届く前に失敗したfetchやRPC呼び出しを、ランタイムが自動で再試行するようになった。既定は最大4回で、開始から10秒を超えて再試行は始まらない。オブジェクト側のコードが投げたエラーやoverloadedのエラーは対象外。到達したか分からない場合でも同じメソッドが二度実行されることはなく、二度実行しても安全な処理だけをretryable()で明示する。利用にはWrangler 4.158.0以降への更新が要る。",
+    "serviceIds": [
+      "durable-objects"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-05-durable-objects-automatic-retries/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "ai-gateway-model-aliases-20261104",
+    "publishedAt": "2026-11-04",
+    "titleJa": "AI Gatewayで複数モデルを別名ひとつで呼び分け可能に",
+    "summaryJa": "AI Gatewayにモデルエイリアスが加わり、複数のモデルをまとめた名前をアプリから呼べるようになった。失敗時は並び順に次のモデルへ切り替え、リクエストごとにモデルを選ぶ方式も選べる。モデルの入れ替えや方式変更はゲートウェイ側の設定で行え、アプリの再デプロイは不要。エイリアスはゲートウェイごとに作る。",
+    "serviceIds": [
+      "ai-gateway"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-04-model-aliases/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "personal-agent-policies-20261104",
+    "publishedAt": "2026-11-04",
+    "titleJa": "主要なPersonal Agentsごとにアクセス方針を設定可能に",
+    "summaryJa": "AIボット向けポリシーの設定名が「AI Crawler and Agent access policies」に変わり、主要なPersonal Agentsについては一律ではなく個別に許可などの動作を設定できるようになった。利用者の代わりにページ取得や閲覧を行うエージェントを、サイト側で細かく制御するための変更。",
+    "serviceIds": [
+      "bots",
+      "ai-crawl-control"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-04-personal-agent-policies/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "browser-isolation-keyboard-readonly-20261104",
+    "publishedAt": "2026-11-04",
+    "titleJa": "Browser IsolationのBetaで入力を止めつつ検索やコピーを許可可能に",
+    "summaryJa": "分離ポリシーのキーボード設定にBetaの選択肢「Allow read-only actions」が加わった。文字入力はページへ届かない一方、ページ内検索、全選択、コピー、印刷、ズームは使える。コピーや印刷はそれぞれ独自の設定も効くため組み合わせて制御できる。APIではkeyboardにenable_read_only_actionsを指定する。",
+    "serviceIds": [
+      "browser-isolation"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-04-granular-keyboard-controls/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "magic-firewall-cve-2026-98432-rule-20261104",
+    "publishedAt": "2026-11-04",
+    "titleJa": "Cloudflare Network FirewallにCVE-2026-98432向けの管理ルールを追加",
+    "summaryJa": "LinuxのIPv4 TCPの脆弱性CVE-2026-98432への対策として、Network Firewallの管理ルールが追加された。既定では無効で、まずLogで有効化して一致する通信を確認し、想定外でなければBlockへ切り替える手順が案内されている。",
+    "serviceIds": [
+      "magic-firewall"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-04-cve-2026-98432-managed-rule/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "load-balancing-private-session-affinity-20261104",
+    "publishedAt": "2026-11-04",
+    "titleJa": "プライベートロードバランサーで同じ利用者を同じ接続先に固定可能に",
+    "summaryJa": "プライベートロードバランサーで、利用者を同じエンドポイントへつなぎ続けられるようになった。プール側のHash指定、またはAPIでsession_affinityにip_cookieを設定して使う。Cloudflare One Client経由では端末で利用者を識別するためIPアドレスが変わっても固定が続く。固定されるのは接続先であり、Tunnelなどの経路側ではない。",
+    "serviceIds": [
+      "load-balancing"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-04-private-lb-session-affinity/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "warp-linux-client-20261103",
+    "publishedAt": "2026-11-03",
+    "titleJa": "Cloudflare One Client for Linux v2026.7.1385.0",
+    "summaryJa": "Linux版クライアントのGA版2026.7.1385.0が公開された。信頼済み証明書チェーンの構築に関する問題へのホットフィックスとされる。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-03-warp-linux-ga/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "agents-pi15-20261103",
+    "publishedAt": "2026-11-03",
+    "titleJa": "Agents SDKがPi 1.5に対応しセッションAPIが変更",
+    "summaryJa": "Agents SDK v0.33.0でPiHarnessがPi 1.5になり、ストリーミング中の保存がまとめ書きになって書き込み回数やメモリ使用が減った。session.events()はsession.watch()に置き換わり、メッセージを追加せず実行を再開するsession.continue()が加わった一方、retry()とparkedステータスは廃止された。Pi 1.5で動かした会話はPi 1.4では読めないため、更新時は前方修正が前提になる。",
+    "serviceIds": [
+      "agents"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-03-pi-harness-pi-1-5/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "ai-gateway-required-authentication-20261103",
+    "publishedAt": "2026-11-03",
+    "titleJa": "新規のAI Gatewayでは認証が必須に",
+    "summaryJa": "新しく作るAI Gatewayでは認証が必須になり、一度有効にした認証はダッシュボードやAPIから無効に戻せなくなった。API作成時にauthenticationをfalseにするとHTTP 400で拒否される。認証が無効な既存ゲートウェイはそのまま使えるが、有効化する場合はクライアント側でAPIトークンを送る準備が要る。Workersバインディング経由は従来どおり認証済みとして扱われる。",
+    "serviceIds": [
+      "ai-gateway"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-03-required-authentication/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "browser-run-crawl-diagnostics-20261103",
+    "publishedAt": "2026-11-03",
+    "titleJa": "Browser Runのクロール結果にURLごとの結果とrobots.txt診断を追加",
+    "summaryJa": "Browser Runの/crawlの結果で、URLごとにsuccessやrobots_disallowed、timeout、page_errorといった処理結果（outcome）が分かるようになった。ジョブ全体では最大50件のオリジンについてrobots.txtの取得状態も返され、利用できるルールがあったかや応答のHTTPステータスを確認できる。",
+    "serviceIds": [
+      "browser-run"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-03-crawl-result-diagnostics/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "r2-request-metrics-breakdown-20261103",
+    "publishedAt": "2026-11-03",
+    "titleJa": "R2のバケット指標を地域別とHTTPエラーコード別に比較可能に",
+    "summaryJa": "R2バケットのMetrics画面で、リクエストの活動を地域別に比べたり、エラーをHTTPステータスコード別に確認したりできるようになった。書き込み・読み取り・エラー・429で絞り込みもできるため、障害の発生場所と種類を切り分けやすくなる。",
+    "serviceIds": [
+      "r2"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-03-r2-request-error-breakdowns/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "ai-search-billing-sync-20261102",
+    "publishedAt": "2026-11-02",
+    "titleJa": "AI Searchの課金開始が2026-12-01に延期され既定の同期間隔が24時間に",
+    "summaryJa": "AI Searchの課金開始が当初の2026年11月1日から同年12月1日へ1か月延期され、それまでの利用は課金されない。料金や含まれる利用量は変わらない。あわせて、インスタンスの既定の同期間隔が6時間から24時間になり、15分から24時間の範囲では従来どおり変更できる。",
+    "serviceIds": [
+      "ai-search"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-02-billing-postponed-default-sync-interval/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "access-service-token-tags-20261102",
+    "publishedAt": "2026-11-02",
+    "titleJa": "Accessのサービストークンにタグを付けタグ条件で認可可能に",
+    "summaryJa": "Accessのサービストークンにキーと値のタグを最大5件まで付けられるようになった。タグは一覧の検索や絞り込みに使えるほか、Service Token Tagセレクタでタグが一致するトークンをService Authポリシーの対象にでき、個別列挙なしに環境やチーム単位で認可をまとめられる。",
+    "serviceIds": [
+      "access"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-02-service-token-tags/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "workers-module-registry-default-20261102",
+    "publishedAt": "2026-11-02",
+    "titleJa": "Workersの新しいモジュールレジストリが2026-11-17から既定に",
+    "summaryJa": "互換性日付が2026年11月17日以降のJavaScript Workersでは、新しいモジュールレジストリが既定で使われるようになる。Node.js互換ではrequire()でESモジュールを読み込めるようになる一方、不正なimport属性は拒否され、最上位awaitを使う依存がある場合はrequire()が失敗する。従来動作を保つにはlegacy_module_registryフラグを使う。Python Workersは対象外。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-02-module-registry-default/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
+    "id": "workers-request-signal-default-20261102",
+    "publishedAt": "2026-11-02",
+    "titleJa": "WorkersのRequest.signalが2026-11-17から既定で有効に",
+    "summaryJa": "互換性日付が2026年11月17日以降のWorkersでは、クライアント切断をrequest.signalで受け取る動作が既定で有効になる。切断時に不要な処理を止めたり後片付けをしたりでき、従来必要だったenable_request_signalフラグは不要になる。無効に戻すにはdisable_request_signalを指定する。request_signal_passthroughは引き続き自動では有効にならない。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-02-request-signal-default/",
+    "verifiedAt": "2026-11-09"
+  },
+  {
     "id": "browser-run-chrome-152-20261030",
     "publishedAt": "2026-10-30",
     "titleJa": "Browser Runの既定ブラウザがChrome 152に更新",
