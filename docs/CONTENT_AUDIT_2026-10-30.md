@@ -95,6 +95,24 @@
 | service | `images` | https://developers.cloudflare.com/images/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `stream` | https://developers.cloudflare.com/stream/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `realtime` | https://developers.cloudflare.com/realtime/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
+| update | `ai-gateway-provider-key-activity-20261106` | https://developers.cloudflare.com/changelog/post/2026-11-06-provider-key-security/ | 詳細対照 | プロバイダーキーの最終利用・更新日と90日超の表示、2026年11月からの記録開始を原典本文と照合。事実のみを独自の短文で記述し、公式表現は転載しない。 |
+| update | `access-passkeys-20261106` | https://developers.cloudflare.com/changelog/post/2026-11-06-access-passkeys/ | 詳細対照 | パスキーでのログイン対応、登録時の本人確認、管理者による許可と削除を原典本文と照合。画面画像は転載せず事実のみを独自要約。 |
+| update | `workers-ai-model-deprecations-20261105` | https://developers.cloudflare.com/changelog/post/2026-11-05-planned-model-deprecations/ | 詳細対照 | 2026-11-20の廃止日、当初の11-15からの延期、廃止後の410とエラーコード5028を原典本文と照合。モデル一覧は転載せず影響の要旨のみ記述。 |
+| update | `durable-objects-automatic-retries-20261105` | https://developers.cloudflare.com/changelog/post/2026-11-05-durable-objects-automatic-retries/ | 詳細対照 | 自動再試行の既定回数と時間上限、対象外のエラー、二重実行回避と必要バージョンを原典本文と照合。コード例は転載しない。 |
+| update | `ai-gateway-model-aliases-20261104` | https://developers.cloudflare.com/changelog/post/2026-11-04-model-aliases/ | 詳細対照 | エイリアスの順次フォールバックとスマートルーティング、再デプロイ不要、ゲートウェイ単位の範囲を原典本文と照合。API例は転載しない。 |
+| update | `personal-agent-policies-20261104` | https://developers.cloudflare.com/changelog/post/2026-11-04-personal-agent-policies/ | 詳細対照 | 設定名の変更と主要Personal Agentsの個別設定を原典本文と照合。事実のみを独自要約し、画面画像は転載しない。 |
+| update | `browser-isolation-keyboard-readonly-20261104` | https://developers.cloudflare.com/changelog/post/2026-11-04-granular-keyboard-controls/ | 詳細対照 | Betaの読み取り専用キー操作、残せる操作と他設定との組み合わせ、API指定値を原典本文と照合。事実のみを独自要約。 |
+| update | `magic-firewall-cve-2026-98432-rule-20261104` | https://developers.cloudflare.com/changelog/post/2026-11-04-cve-2026-98432-managed-rule/ | 詳細対照 | CVE番号、新規管理ルール、既定無効とLogからBlockへの手順を原典本文と照合。ルールID等の表記は事実として扱い独自要約。 |
+| update | `load-balancing-private-session-affinity-20261104` | https://developers.cloudflare.com/changelog/post/2026-11-04-private-lb-session-affinity/ | 詳細対照 | Hash指定とip_cookieによる固定、One Clientでは端末識別になる点を原典本文と照合。図は転載せず事実のみ記述。 |
+| update | `warp-linux-client-20261103` | https://developers.cloudflare.com/changelog/post/2026-11-03-warp-linux-ga/ | 詳細対照 | Linux版GAの版数2026.7.1385.0と証明書チェーンのホットフィックスを原典本文と照合。事実のみを独自要約。 |
+| update | `agents-pi15-20261103` | https://developers.cloudflare.com/changelog/post/2026-11-03-pi-harness-pi-1-5/ | 詳細対照 | Pi 1.5化による保存・処理の改善、APIの置換と廃止、旧版で読めない注意を原典本文と照合。コード例は転載しない。 |
+| update | `ai-gateway-required-authentication-20261103` | https://developers.cloudflare.com/changelog/post/2026-11-03-required-authentication/ | 詳細対照 | 新規ゲートウェイの認証必須、無効化不可と400応答、既存分の扱いを原典本文と照合。設定例は転載せず事実のみ記述。 |
+| update | `browser-run-crawl-diagnostics-20261103` | https://developers.cloudflare.com/changelog/post/2026-11-03-crawl-result-diagnostics/ | 詳細対照 | URLごとのoutcomeと最大50オリジンのrobots.txt診断を原典本文と照合。JSON例は転載せず事実のみを独自要約。 |
+| update | `r2-request-metrics-breakdown-20261103` | https://developers.cloudflare.com/changelog/post/2026-11-03-r2-request-error-breakdowns/ | 詳細対照 | 地域別の活動比較とステータスコード別のエラー確認、絞り込み条件を原典本文と照合。画面画像は転載しない。 |
+| update | `ai-search-billing-sync-20261102` | https://developers.cloudflare.com/changelog/post/2026-11-02-billing-postponed-default-sync-interval/ | 詳細対照 | 課金開始の2026-12-01への延期と既定同期間隔の24時間化を原典本文と照合。料金自体の転載はせず事実のみ記述。 |
+| update | `access-service-token-tags-20261102` | https://developers.cloudflare.com/changelog/post/2026-11-02-service-token-tags/ | 詳細対照 | タグの上限5件、検索・絞り込み、タグ条件での認可を原典本文と照合。ポリシー例は転載せず事実のみを独自要約。 |
+| update | `workers-module-registry-default-20261102` | https://developers.cloudflare.com/changelog/post/2026-11-02-module-registry-default/ | 詳細対照 | 2026-11-17以降の互換性日付での既定化、requireの条件と従来動作を保つフラグを原典本文と照合。コード例は転載しない。 |
+| update | `workers-request-signal-default-20261102` | https://developers.cloudflare.com/changelog/post/2026-11-02-request-signal-default/ | 詳細対照 | 2026-11-17以降の互換性日付での既定有効化、オプトアウト方法と対象外の動作を原典本文と照合。コード例は転載しない。 |
 | update | `browser-run-chrome-152-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-chrome-152/ | 詳細対照 | Chrome 152への更新と既定User-Agentの変更、Quick Actions改善を原典本文と照合。事実のみを独自の短文で記述し、公式表現は転載しない。 |
 | update | `d1-query-result-50mb-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-query-result-size-limit/ | 詳細対照 | 2026-11-04適用の50MB上限、対象外のImport/Export、分割取得の必要性を原典本文と照合。エラーメッセージ等の原文は転載しない。 |
 | update | `durable-objects-deferred-code-updates-20261030` | https://developers.cloudflare.com/changelog/post/2026-10-30-durable-objects-deferred-code-updates/ | 詳細対照 | 既定の遅延適用、最大5分の保持、即時適用の選択肢とベストエフォートの注意を原典本文と照合。設定コード例は転載しない。 |
