@@ -95,6 +95,36 @@
 | service | `images` | https://developers.cloudflare.com/images/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `stream` | https://developers.cloudflare.com/stream/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `realtime` | https://developers.cloudflare.com/realtime/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
+| update | `browser-run-quick-actions-local-20261113` | https://developers.cloudflare.com/changelog/post/2026-11-13-quick-actions-local-dev/ | 詳細対照 | ローカル実行でquickActionが動く事実、jsonの仮データとKitesurf未対応の制限を原典本文と照合。コード例は転載せず事実のみを独自要約。 |
+| update | `ai-search-terraform-namespaces-20261113` | https://developers.cloudflare.com/changelog/post/2026-11-13-terraform-namespaces/ | 詳細対照 | v5.29.0のnamespace引数、import IDへの名前空間追加、データソースの必須化を原典本文と照合。設定例は転載しない。 |
+| update | `workers-durable-objects-spend-limits-20261113` | https://developers.cloudflare.com/changelog/post/2026-11-13-spend-management/ | 詳細対照 | WorkersとDurable Objectsの上限・通知設定、上限到達時の利用停止と反映遅延の注意を原典本文と照合。画面画像や図は転載しない。 |
+| update | `ai-search-d1-data-source-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-d1-data-source/ | 詳細対照 | Beta表記、読み取り専用クエリによる行単位の索引化と定期同期を原典本文と照合。API例は転載せず事実のみ記述。 |
+| update | `browser-run-kitesurf-open-source-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-kitesurf-open-source/ | 詳細対照 | Apache 2.0での公開、Workers上で動く仕組みとCDP対応、実験的段階とDynamic Workers要件を原典本文と照合。事実のみを独自要約。 |
+| update | `d1-export-virtual-tables-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-d1-export-virtual-tables/ | 詳細対照 | 仮想テーブルを含むDBのエクスポート対応、sqlite3_cli_only指定、D1へ戻せない制限を原典本文と照合。コマンド例は転載しない。 |
+| update | `realtime-realtimekit-token-validity-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-realtimekit-auth-token-validity/ | 詳細対照 | 有効期間の指定項目、従来100日固定からの変更、単一トークン失効と課金対象外の扱いを原典本文と照合。API例は転載しない。 |
+| update | `realtime-realtimekit-noise-cancellation-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-realtimekit-noise-cancellation/ | 詳細対照 | 専用パッケージ名、ブラウザ側で送信前に除去する仕組み、対応範囲とモバイルSDK未対応を原典本文と照合。コード例は転載しない。 |
+| update | `tunnel-url-normalization-matrix-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-cloudflared-matrix-path-parameters/ | 詳細対照 | 2026.11.0でのセミコロン区切りパス対応、既定有効化の2027-02-08への延期、対象外の範囲を原典本文と照合。事実のみを独自要約。 |
+| update | `waf-ai-security-terraform-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-ai-security-for-apps-terraform/ | 詳細対照 | プロバイダーv5.29.0の2リソース名と役割を原典本文と照合。Terraform設定例は転載せず事実のみ記述。 |
+| update | `workers-ai-embeddinggemma-2-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-embeddinggemma-2-workers-ai/ | 詳細対照 | モデル名、768次元と多モーダル対応、次元縮小の選択肢と文脈長を原典本文と照合。コード例は転載しない。 |
+| update | `workers-ai-inkling-2-small-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-inkling-2-small-workers-ai/ | 詳細対照 | モデル名、MoE構成と文脈長、利用条件とレート上限の違いを原典本文と照合。宣伝表現は使わず事実のみ記述。 |
+| update | `access-leaked-service-token-20261111` | https://developers.cloudflare.com/changelog/post/2026-11-11-leaked-service-token-recovery/ | 詳細対照 | GitHub検出時の無効化と管理者通知、交換時の猶予なし、対象となる秘密形式の開始日を原典本文と照合。正規表現は転載しない。 |
+| update | `api-shield-web-assets-metric-views-20261111` | https://developers.cloudflare.com/changelog/post/2026-11-11-web-assets-metric-views/ | 詳細対照 | 指標別ビューの種類とサーバー側ソート対応を原典本文と照合。事実のみを独自の短文で記述。 |
+| update | `durable-objects-request-routing-20261111` | https://developers.cloudflare.com/changelog/post/2026-11-11-durable-objects-request-routing/ | 詳細対照 | 中継接続を省く手順変更とp99遅延改善の可能性、変更不要の点を原典本文と照合。事実のみを独自要約。 |
+| update | `hyperdrive-raised-limits-20261111` | https://developers.cloudflare.com/changelog/post/2026-11-11-hyperdrive-raised-limits/ | 詳細対照 | 設定上限25から100、接続上限100から1,500への引き上げと対象プランを原典本文と照合。数値は事実として記述。 |
+| update | `realtime-realtimekit-whiteboard-20261111` | https://developers.cloudflare.com/changelog/post/2026-11-11-realtimekit-whiteboard-plugin/ | 詳細対照 | Cloudflareホスト型プラグイン、ボードの保持と参加者限定のアクセスを原典本文と照合。コード例は転載しない。 |
+| update | `warp-windows-beta-20261110` | https://developers.cloudflare.com/changelog/post/2026-11-10-warp-windows-beta/ | 詳細対照 | 版数2026.9.2663.1、接続先自動選択、アンインストール防止、DiagnosticsとMTU改善の要点を原典本文と照合。詳細な変更一覧は転載しない。 |
+| update | `warp-macos-beta-20261110` | https://developers.cloudflare.com/changelog/post/2026-11-10-warp-macos-beta/ | 詳細対照 | 版数2026.9.2663.1、macOS 15.0最低要件と14非対応、接続先自動選択やDiagnostics追加を原典本文と照合。詳細な変更一覧は転載しない。 |
+| update | `warp-windows-ga-20261110` | https://developers.cloudflare.com/changelog/post/2026-11-10-warp-windows-ga/ | 詳細対照 | GA版2026.4.1391.0と証明書チェーンのホットフィックスであることを原典本文と照合。事実のみを独自要約。 |
+| update | `warp-linux-ga-20261110` | https://developers.cloudflare.com/changelog/post/2026-11-10-warp-linux-ga/ | 詳細対照 | GA版2026.4.1391.0と証明書チェーンのホットフィックスであることを原典本文と照合。事実のみを独自要約。 |
+| update | `warp-macos-ga-20261110` | https://developers.cloudflare.com/changelog/post/2026-11-10-warp-macos-ga/ | 詳細対照 | GA版2026.4.1391.0と証明書チェーンのホットフィックスであることを原典本文と照合。事実のみを独自要約。 |
+| update | `stream-faster-mp4-downloads-20261110` | https://developers.cloudflare.com/changelog/post/2026-11-10-faster-mp4-downloads/ | 詳細対照 | 生成が最大40%高速化、変更不要、1分超の動画で効果が大きい点を原典本文と照合。レスポンス例は転載しない。 |
+| update | `workers-pages-github-repositories-20261110` | https://developers.cloudflare.com/changelog/post/2026-11-10-user-scoped-github-repositories/ | 詳細対照 | 選択一覧が自分のGitHubアカウント基準になる変更、他者アカウントの扱い、接続済みへの影響なしを原典本文と照合。画面画像は転載しない。 |
+| update | `workflows-concurrency-limit-20261110` | https://developers.cloudflare.com/changelog/post/2026-11-10-per-workflow-concurrency-limits/ | 詳細対照 | 上限の指定方法、超過分の待機、アカウント上限と下げた場合の扱い、毎回デプロイ時の注意と必要版数を原典本文と照合。設定例は転載しない。 |
+| update | `warp-linux-ga-20261109` | https://developers.cloudflare.com/changelog/post/2026-11-09-warp-linux-ga/ | 詳細対照 | GA版2026.6.906.0と証明書チェーンのホットフィックスであることを原典本文と照合。事実のみを独自要約。 |
+| update | `warp-windows-ga-20261109` | https://developers.cloudflare.com/changelog/post/2026-11-09-warp-windows-ga/ | 詳細対照 | GA版2026.6.906.0と証明書チェーンのホットフィックスであることを原典本文と照合。事実のみを独自要約。 |
+| update | `warp-macos-ga-20261109` | https://developers.cloudflare.com/changelog/post/2026-11-09-warp-macos-ga/ | 詳細対照 | GA版2026.6.906.0と証明書チェーンのホットフィックスであることを原典本文と照合。事実のみを独自要約。 |
+| update | `bots-partitioned-cookie-20261109` | https://developers.cloudflare.com/changelog/post/2026-11-09-partitioned-bm-cookie/ | 詳細対照 | Partitioned付与の条件、iframe内での保持と継続判定への効果を原典本文と照合。事実のみを独自要約。 |
+| update | `durable-objects-startup-placement-20261109` | https://developers.cloudflare.com/changelog/post/2026-11-09-durable-objects-reactivation-placement/ | 詳細対照 | 最終実行マシンでの再起動、データ再読込の軽減、全リージョン有効で対応不要の点を原典本文と照合。事実のみを独自要約。 |
 | update | `ai-gateway-provider-key-activity-20261106` | https://developers.cloudflare.com/changelog/post/2026-11-06-provider-key-security/ | 詳細対照 | プロバイダーキーの最終利用・更新日と90日超の表示、2026年11月からの記録開始を原典本文と照合。事実のみを独自の短文で記述し、公式表現は転載しない。 |
 | update | `access-passkeys-20261106` | https://developers.cloudflare.com/changelog/post/2026-11-06-access-passkeys/ | 詳細対照 | パスキーでのログイン対応、登録時の本人確認、管理者による許可と削除を原典本文と照合。画面画像は転載せず事実のみを独自要約。 |
 | update | `workers-ai-model-deprecations-20261105` | https://developers.cloudflare.com/changelog/post/2026-11-05-planned-model-deprecations/ | 詳細対照 | 2026-11-20の廃止日、当初の11-15からの延期、廃止後の410とエラーコード5028を原典本文と照合。モデル一覧は転載せず影響の要旨のみ記述。 |
@@ -123,7 +153,7 @@
 | update | `agents-skills-files-20261029` | https://developers.cloudflare.com/changelog/post/2026-10-29-agent-skills-from-files/ | 詳細対照 | Skillsのファイル化、読み込み元、破壊的変更と必要バージョンを原典本文と照合。コード例は転載せず事実のみ記述。 |
 | update | `agents-internal-hostnames-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-browser-internal-hostnames/ | 詳細対照 | 内部ホスト名による開発サーバープレビュー、対象の選択方法、必要バージョンを原典本文と照合。コード例は転載しない。 |
 | update | `china-network-native-challenge-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-china-native-challenge-pages/ | 詳細対照 | 本土ホストのTurnstileへの切替、自動適用で操作不要である点を原典本文と照合。事実のみを独自要約。 |
-| update | `workers-static-assets-base-path-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-static-assets-base-path/ | 詳細対照 | base_pathによる接頭辞配信と必要バージョンを原典本文と照合。設定コード例は転載しない。 |
+| update | `workers-static-assets-base-path-20261028` | https://developers.cloudflare.com/changelog/post/2026-11-11-static-assets-base-path/ | 詳細対照 | 2026-10-28版の原典URLが404になったことを2026-11-16に実ブラウザで確認。同じbase_path機能（Wrangler 4.148.0以降）を公式が2026-11-11に再公開し、cf側の設定（worker.assets.basePath、cf 1.0.0-beta.13以降）が加わったため、既存行の出典・公開日・要約を再公開記事に合わせて再評価した。設定コード例は転載しない。 |
 | update | `workers-vpc-virtual-network-20261028` | https://developers.cloudflare.com/changelog/post/2026-10-28-virtual-network-bindings/ | 詳細対照 | バインディングごとの仮想ネットワーク指定と既定指定の継続を原典本文と照合。設定コード例は転載しない。 |
 | update | `access-custom-pages-20261027` | https://developers.cloudflare.com/changelog/post/2026-10-27-access-custom-pages/ | 詳細対照 | 対象4ページのテンプレート対応と割り当て方法を原典本文と照合。事実のみを独自要約し、画面画像は転載しない。 |
 | update | `workflows-jurisdiction-20261027` | https://developers.cloudflare.com/changelog/post/2026-10-27-workflow-jurisdictions/ | 詳細対照 | 対応する管轄地域、作成時決定で変更不可、必要バージョンを原典本文と照合。設定コード例は転載しない。 |

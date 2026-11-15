@@ -1,5 +1,380 @@
 [
   {
+    "id": "browser-run-quick-actions-local-20261113",
+    "publishedAt": "2026-11-13",
+    "titleJa": "Browser RunのQuick Actionsをローカル開発で実行可能に",
+    "summaryJa": "wrangler devのローカル実行でも、ブラウザバインディングのquickAction()が手元のChromeで動くようになった。従来はリモート実行時だけ使え、ローカルでは未実装エラーになっていた。jsonアクションはローカルではAIモデルを使えないためスキーマに沿った仮データを返し、Kitesurfブラウザはローカル未対応。",
+    "serviceIds": [
+      "browser-run"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-13-quick-actions-local-dev/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "ai-search-terraform-namespaces-20261113",
+    "publishedAt": "2026-11-13",
+    "titleJa": "AI SearchをTerraformで任意の名前空間で管理可能に",
+    "summaryJa": "Terraformプロバイダーv5.29.0から、AI Searchインスタンスをdefault以外の名前空間でも管理できるようになった。インスタンスのリソースにnamespace引数が加わり、import用のIDにも名前空間が含まれるようになったため、既存設定ではimport IDとデータソースのnamespace指定の見直しが要る。",
+    "serviceIds": [
+      "ai-search"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-13-terraform-namespaces/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "workers-durable-objects-spend-limits-20261113",
+    "publishedAt": "2026-11-13",
+    "titleJa": "WorkersとDurable Objectsに支出上限と通知を設定可能に",
+    "summaryJa": "WorkersとDurable Objectsに、課金期間単位の支出上限やメール通知のしきい値を設定できるようになった。上限に達すると対象製品の利用が止まる設定も選べ、通知だけにすることもできる。集計や反映には時間がかかるため、記録上の支出が上限を超える場合がある。他製品への対応は今後とされる。",
+    "serviceIds": [
+      "workers",
+      "durable-objects"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-13-spend-management/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "ai-search-d1-data-source-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "AI SearchのデータソースにD1データベース（Beta）",
+    "summaryJa": "AI Searchの取り込み元としてD1データベースを使えるようになった（Beta）。読み取り専用のクエリを指定し、返った行を1件ずつ文書として索引化する。定期同期で追加・変更・削除が索引へ反映される。作成はダッシュボード、REST API、Workersバインディングから行える。",
+    "serviceIds": [
+      "ai-search",
+      "d1"
+    ],
+    "type": "public-beta",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-d1-data-source/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "browser-run-kitesurf-open-source-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "Browser Runの基盤エンジンKitesurfがオープンソースに",
+    "summaryJa": "AIエージェント向けブラウザエンジンKitesurfがApache 2.0で公開された。Workers上で動き、ブラウザコンテナなしでHTML解析やJavaScript実行、スクリーンショット取得を行い、CDP経由でPuppeteerなどから接続できる。実験的で開発途上の位置づけとされ、Cloudflare上で動かすにはWorkers有料プランのDynamic Workersが要る。",
+    "serviceIds": [
+      "browser-run"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-kitesurf-open-source/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "d1-export-virtual-tables-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "D1のエクスポートが仮想テーブルを含むデータベースに対応",
+    "summaryJa": "FTS5やR*Treeなどの仮想テーブルを含むD1データベースもエクスポートできるようになった。従来は仮想テーブルがあると失敗していた。エクスポートAPIやwrangler d1 exportで互換性オプションsqlite3_cli_onlyを指定する。この形式のダンプはSQLite CLI専用で、D1へは戻せない。",
+    "serviceIds": [
+      "d1"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-d1-export-virtual-tables/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "realtime-realtimekit-token-validity-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "RealtimeKitの認証トークンに有効期間の指定と個別失効を追加",
+    "summaryJa": "RealtimeKitの参加者用認証トークンで、有効になる時刻と失効時刻を指定できるようになった。従来は発行から100日固定だった。参加者追加時にnot_beforeとexpires_onを渡す。単一トークンだけの失効もでき、失効した参加者は会議から外れる。期限切れや失効済みのトークンは参加前に拒否され課金対象にならない。",
+    "serviceIds": [
+      "realtime"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-realtimekit-auth-token-validity/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "realtime-realtimekit-noise-cancellation-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "RealtimeKitのWebアプリにノイズ除去を追加可能に",
+    "summaryJa": "RealtimeKitのWebアプリ向けに、背景ノイズ除去のパッケージ@cloudflare/realtimekit-noise-cancellationが公開された。参加者のブラウザ側で送信前に音声のノイズを取り除き、マイクが使えるようになると自動で有効になる。React、Angular、JavaScriptのWebアプリが対象で、iOSとAndroidのSDKは未対応。",
+    "serviceIds": [
+      "realtime"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-realtimekit-noise-cancellation/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "tunnel-url-normalization-matrix-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "Cloudflare TunnelのURL正規化がセミコロン区切りのパスにも対応",
+    "summaryJa": "cloudflared 2026.11.0から、URL正規化がセミコロン区切りのパスパラメータもingressルールの照合前に処理するようになった。Access検証を要するルールがあるTunnelの安全性に関わる変更で、オリジンへ送るパス自体は変わらない。正規化の既定有効化は2027年2月8日開始のリリースへ延期され、従来予告の2027年1月25日から後ろ倒しになった。現在は既定で無効。",
+    "serviceIds": [
+      "cloudflare-tunnel"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-cloudflared-matrix-path-parameters/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "waf-ai-security-terraform-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "AI Security for AppsをTerraformで管理可能に",
+    "summaryJa": "Terraformプロバイダーv5.29.0に、AI Security for Apps向けの2リソースが加わった。ゾーン単位の有効・無効と、プロンプト判定に使うカスタムトピックをTerraformで定義できる。検知設定とカスタムルールを同じTerraform設定で扱える。",
+    "serviceIds": [
+      "waf"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-ai-security-for-apps-terraform/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "workers-ai-embeddinggemma-2-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "Workers AIでEmbeddingGemma 2が利用可能に",
+    "summaryJa": "Workers AIで埋め込みモデルのEmbeddingGemma 2が使えるようになった。テキスト、画像、動画、音声を同じ768次元のベクトル空間へ変換でき、混在したコレクションをテキストのクエリで検索できる。100超の言語とコードに対応し、次元数は128、256、512への縮小も選べる。文脈長は8,192トークン。",
+    "serviceIds": [
+      "workers-ai"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-embeddinggemma-2-workers-ai/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "workers-ai-inkling-2-small-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "Workers AIでInkling 2 Smallが利用可能に",
+    "summaryJa": "Workers AIでThinking Machines LabのモデルInkling 2 Smallが使えるようになった。テキストと画像を扱うMoEモデルで、関数呼び出しや推論の強さの調整に対応し、文脈長は1,048,576トークン。利用にはWorkers有料プランかAI Gatewayの前払いクレジットが要り、レート上限は課金方式で異なる。",
+    "serviceIds": [
+      "workers-ai"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-inkling-2-small-workers-ai/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "access-leaked-service-token-20261111",
+    "publishedAt": "2026-11-11",
+    "titleJa": "GitHubがAccessサービストークンの漏洩を自動検出",
+    "summaryJa": "GitHubのシークレットスキャンが、公開リポジトリに出たAccessサービストークンの秘密を検出してCloudflareへ知らせるようになった。検出されたトークンはAccess側で無効化され、管理者へメールが送られる。再有効化には秘密の交換が先に必要で、漏洩した秘密の交換では猶予期間がなく旧秘密は即時に破棄される。対象は2026年8月26日以降に作られたClient Secretの形式。",
+    "serviceIds": [
+      "access"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-11-leaked-service-token-recovery/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "api-shield-web-assets-metric-views-20261111",
+    "publishedAt": "2026-11-11",
+    "titleJa": "API ShieldのWeb Assets画面に指標別のビューを追加",
+    "summaryJa": "API ShieldのWeb Assets > Operations画面に、トラフィック、エラー、遅延、応答サイズ、セキュリティといった指標に絞ったビューが加わった。各ビューで関連指標の表示とサーバー側ソートができ、件数の多いオペレーション一覧でも優先度を付けやすくなった。",
+    "serviceIds": [
+      "api-shield"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-11-web-assets-metric-views/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "durable-objects-request-routing-20261111",
+    "publishedAt": "2026-11-11",
+    "titleJa": "Durable Objectsへの接続経路を短縮し遅延を改善",
+    "summaryJa": "Durable Objectの配置先がキャッシュされていない場合の接続手順が見直され、最初に受けたデータセンターが中継接続を作らず配置先を直接返すようになった。転送が関わるリクエストでp99の接続遅延が下がる場合がある。コードや設定の変更は不要。",
+    "serviceIds": [
+      "durable-objects"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-11-durable-objects-request-routing/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "hyperdrive-raised-limits-20261111",
+    "publishedAt": "2026-11-11",
+    "titleJa": "Hyperdriveの設定数と接続数の上限を引き上げ",
+    "summaryJa": "Workers有料プランで、Hyperdriveの設定をアカウントあたり25件から100件まで作れるようになった。設定ごとのオリジン接続数の上限も100から1,500へ上がった。接続数の指定はダッシュボード、Wrangler、REST APIから行える。オリジン側の接続上限より低く設定することが推奨されている。",
+    "serviceIds": [
+      "hyperdrive"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-11-hyperdrive-raised-limits/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "realtime-realtimekit-whiteboard-20261111",
+    "publishedAt": "2026-11-11",
+    "titleJa": "RealtimeKitの会議に共同編集ホワイトボードを追加可能に",
+    "summaryJa": "RealtimeKitの会議へ、CloudflareがホストするWhiteboardプラグインを組み込めるようになった。参加者は共有ボードに図形や矢印、手書き、テキストを描け、ボードは会議のセッションをまたいで保持される。開けるのは会議の参加者だけに制限される。組み込みは既存のプラグインAPIで行う。",
+    "serviceIds": [
+      "realtime"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-11-realtimekit-whiteboard-plugin/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "workers-static-assets-base-path-20261028",
+    "publishedAt": "2026-11-11",
+    "titleJa": "Workers Static AssetsをURLパスの接頭辞から配信可能に",
+    "summaryJa": "静的アセットの配置ディレクトリを変えずに、/blog/ のようなパス接頭辞配下から配信できる設定が加わった。Wranglerではassets.base_path、cloudflare.config.tsではworker.assets.basePathで指定する。Wrangler 4.148.0以降が必要で、cfを使う場合は1.0.0-beta.13以降が要る。",
+    "serviceIds": [
+      "workers"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-11-static-assets-base-path/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "warp-windows-beta-20261110",
+    "publishedAt": "2026-11-10",
+    "titleJa": "Windows版Cloudflare One ClientのBeta v2026.9.2663.1",
+    "summaryJa": "Windows版Betaに、Global Accelerationの接続先自動選択、管理者コードによるアンインストール防止、接続状態やDEXテスト結果をまとめるDiagnosticsページ、低MTU時のバナー表示などが加わった。Path MTU Discoveryの扱いも見直されている。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-10-warp-windows-beta/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "warp-macos-beta-20261110",
+    "publishedAt": "2026-11-10",
+    "titleJa": "macOS版Cloudflare One ClientのBeta v2026.9.2663.1",
+    "summaryJa": "macOS版Betaの最低対応OSはmacOS 15.0となり、macOS 14では動作しない。Global Accelerationの接続先自動選択、Diagnosticsページ、低MTU時のバナー表示などが加わり、スリープ復帰後の接続やDNSの不具合修正も含まれる。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-10-warp-macos-beta/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "warp-windows-ga-20261110",
+    "publishedAt": "2026-11-10",
+    "titleJa": "Cloudflare One Client for Windows v2026.4.1391.0",
+    "summaryJa": "Windows版クライアントのGA版2026.4.1391.0が公開された。信頼済み証明書チェーンの構築に関する問題へのホットフィックスとされる。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-10-warp-windows-ga/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "warp-linux-ga-20261110",
+    "publishedAt": "2026-11-10",
+    "titleJa": "Cloudflare One Client for Linux v2026.4.1391.0",
+    "summaryJa": "Linux版クライアントのGA版2026.4.1391.0が公開された。信頼済み証明書チェーンの構築に関する問題へのホットフィックスとされる。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-10-warp-linux-ga/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "warp-macos-ga-20261110",
+    "publishedAt": "2026-11-10",
+    "titleJa": "Cloudflare One Client for macOS v2026.4.1391.0",
+    "summaryJa": "macOS版クライアントのGA版2026.4.1391.0が公開された。信頼済み証明書チェーンの構築に関する問題へのホットフィックスとされる。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-10-warp-macos-ga/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "stream-faster-mp4-downloads-20261110",
+    "publishedAt": "2026-11-10",
+    "titleJa": "StreamのMP4ダウンロード生成が高速化",
+    "summaryJa": "Cloudflare StreamでMP4ダウンロードの生成が最大で40%速くなった。実装の変更は不要で、1分を超えるオンデマンド動画で効果が大きいとされる。生成はダッシュボード、cf CLI、APIのPOSTリクエストから行える。",
+    "serviceIds": [
+      "stream"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-10-faster-mp4-downloads/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "workers-pages-github-repositories-20261110",
+    "publishedAt": "2026-11-10",
+    "titleJa": "Workers BuildsとPagesのリポジトリ選択が自分のGitHubアカウント基準に",
+    "summaryJa": "Workers BuildsやPagesへGitHubリポジトリを接続するときに選べるアカウントとリポジトリが、Cloudflareアカウントに紐づくアプリ導入状況ではなく、自分のGitHubアカウントでアクセスできる範囲で表示されるようになった。他の利用者のアカウントは、個別リポジトリへのアクセス権があっても一覧に出なくなる。接続済みプロジェクトには影響しない。",
+    "serviceIds": [
+      "workers",
+      "pages"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-10-user-scoped-github-repositories/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "workflows-concurrency-limit-20261110",
+    "publishedAt": "2026-11-10",
+    "titleJa": "Workflowごとに同時実行数の上限を設定可能に",
+    "summaryJa": "個別のWorkflowに同時実行数の上限を設定できるようになった。上限を超えたインスタンスは拒否されず、実行中が終わるまで待機する。上限はアカウント全体の上限以下で指定し、下げても実行中は止まらない。デプロイのたびに設定を含めないと上限が外れるため注意が要る。Wrangler 4.127.0以降が必要。",
+    "serviceIds": [
+      "workflows"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-10-per-workflow-concurrency-limits/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "warp-linux-ga-20261109",
+    "publishedAt": "2026-11-09",
+    "titleJa": "Cloudflare One Client for Linux v2026.6.906.0",
+    "summaryJa": "Linux版クライアントのGA版2026.6.906.0が公開された。信頼済み証明書チェーンの構築に関する問題へのホットフィックスとされる。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-09-warp-linux-ga/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "warp-windows-ga-20261109",
+    "publishedAt": "2026-11-09",
+    "titleJa": "Cloudflare One Client for Windows v2026.6.906.0",
+    "summaryJa": "Windows版クライアントのGA版2026.6.906.0が公開された。信頼済み証明書チェーンの構築に関する問題へのホットフィックスとされる。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-09-warp-windows-ga/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "warp-macos-ga-20261109",
+    "publishedAt": "2026-11-09",
+    "titleJa": "Cloudflare One Client for macOS v2026.6.906.0",
+    "summaryJa": "macOS版クライアントのGA版2026.6.906.0が公開された。信頼済み証明書チェーンの構築に関する問題へのホットフィックスとされる。",
+    "serviceIds": [
+      "warp-client"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-09-warp-macos-ga/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "bots-partitioned-cookie-20261109",
+    "publishedAt": "2026-11-09",
+    "titleJa": "Bot ManagementのCookieにPartitioned属性を追加",
+    "summaryJa": "Bot Managementの__cf_bm Cookieに、条件を満たすHTTPSリクエストでPartitioned属性が付くようになった。SameSite=NoneとSecureを付けられる場合に限る。他サイトへ埋め込まれたiframe内でも、表示先サイトの単位でCookieが保持されるため、Bot Managementの継続判定が働きやすくなる。",
+    "serviceIds": [
+      "bots"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-09-partitioned-bm-cookie/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "durable-objects-startup-placement-20261109",
+    "publishedAt": "2026-11-09",
+    "titleJa": "Durable Objectsの再起動時の配置を改善",
+    "summaryJa": "しばらく使われていなかったDurable Objectを再び動かすとき、可能な限り最後に動いていたマシンで起動するようになった。データの読み込み直しが減り、SQLite-backedのオブジェクトではアイドル直後の再開でコールドスタートが減る場合がある。全リージョンで有効で、利用者側の対応は不要。",
+    "serviceIds": [
+      "durable-objects"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-09-durable-objects-reactivation-placement/",
+    "verifiedAt": "2026-11-16"
+  },
+  {
     "id": "ai-gateway-provider-key-activity-20261106",
     "publishedAt": "2026-11-06",
     "titleJa": "AI Gatewayでプロバイダーキーの利用状況を確認可能に",
@@ -337,18 +712,6 @@
     ],
     "type": "service-update",
     "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-china-native-challenge-pages/",
-    "verifiedAt": "2026-11-02"
-  },
-  {
-    "id": "workers-static-assets-base-path-20261028",
-    "publishedAt": "2026-10-28",
-    "titleJa": "Workers Static AssetsをURLパスの接頭辞から配信可能に",
-    "summaryJa": "静的アセットの配置ディレクトリを変えずに、/blog/ のようなパス接頭辞配下から配信できる設定が加わった。Wranglerではassets.base_pathで指定し、Wrangler 4.148.0以降が必要。",
-    "serviceIds": [
-      "workers"
-    ],
-    "type": "service-update",
-    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-28-static-assets-base-path/",
     "verifiedAt": "2026-11-02"
   },
   {
