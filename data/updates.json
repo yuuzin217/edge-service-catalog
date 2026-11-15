@@ -15,7 +15,7 @@
     "id": "ai-search-terraform-namespaces-20261113",
     "publishedAt": "2026-11-13",
     "titleJa": "AI SearchをTerraformで任意の名前空間で管理可能に",
-    "summaryJa": "Terraformプロバイダーv5.29.0から、AI Searchインスタンスをdefault以外の名前空間でも管理できるようになった。cloudflare_ai_search_instanceにnamespace引数が加わり、import用のIDにも名前空間が含まれるようになったため、既存設定ではimport IDとデータソースのnamespace指定の見直しが要る。",
+    "summaryJa": "Terraformプロバイダーv5.29.0から、AI Searchインスタンスをdefault以外の名前空間でも管理できるようになった。インスタンスのリソースにnamespace引数が加わり、import用のIDにも名前空間が含まれるようになったため、既存設定ではimport IDとデータソースのnamespace指定の見直しが要る。",
     "serviceIds": [
       "ai-search"
     ],
@@ -113,7 +113,7 @@
     "id": "waf-ai-security-terraform-20261112",
     "publishedAt": "2026-11-12",
     "titleJa": "AI Security for AppsをTerraformで管理可能に",
-    "summaryJa": "Terraformプロバイダーv5.29.0に、AI Security for Apps向けの2リソースが加わった。cloudflare_ai_securityでゾーン単位の有効・無効を、cloudflare_ai_security_custom_topicsでプロンプト判定に使うカスタムトピックを定義できる。検知設定とカスタムルールを同じTerraform設定で扱える。",
+    "summaryJa": "Terraformプロバイダーv5.29.0に、AI Security for Apps向けの2リソースが加わった。ゾーン単位の有効・無効と、プロンプト判定に使うカスタムトピックをTerraformで定義できる。検知設定とカスタムルールを同じTerraform設定で扱える。",
     "serviceIds": [
       "waf"
     ],
@@ -125,7 +125,7 @@
     "id": "workers-ai-embeddinggemma-2-20261112",
     "publishedAt": "2026-11-12",
     "titleJa": "Workers AIでEmbeddingGemma 2が利用可能に",
-    "summaryJa": "Workers AIで埋め込みモデル@cf/google/embeddinggemma-2が使えるようになった。テキスト、画像、動画、音声を同じ768次元のベクトル空間へ変換でき、混在したコレクションをテキストのクエリで検索できる。100超の言語とコードに対応し、次元数は128、256、512への縮小も選べる。文脈長は8,192トークン。",
+    "summaryJa": "Workers AIで埋め込みモデルのEmbeddingGemma 2が使えるようになった。テキスト、画像、動画、音声を同じ768次元のベクトル空間へ変換でき、混在したコレクションをテキストのクエリで検索できる。100超の言語とコードに対応し、次元数は128、256、512への縮小も選べる。文脈長は8,192トークン。",
     "serviceIds": [
       "workers-ai"
     ],
@@ -137,7 +137,7 @@
     "id": "workers-ai-inkling-2-small-20261112",
     "publishedAt": "2026-11-12",
     "titleJa": "Workers AIでInkling 2 Smallが利用可能に",
-    "summaryJa": "Workers AIでThinking Machines Labのモデル@cf/thinkingmachines/inkling-2-smallが使えるようになった。テキストと画像を扱うMoEモデルで、関数呼び出しや推論の強さの調整に対応し、文脈長は1,048,576トークン。利用にはWorkers有料プランかAI Gatewayの前払いクレジットが要り、レート上限は課金方式で異なる。",
+    "summaryJa": "Workers AIでThinking Machines LabのモデルInkling 2 Smallが使えるようになった。テキストと画像を扱うMoEモデルで、関数呼び出しや推論の強さの調整に対応し、文脈長は1,048,576トークン。利用にはWorkers有料プランかAI Gatewayの前払いクレジットが要り、レート上限は課金方式で異なる。",
     "serviceIds": [
       "workers-ai"
     ],
