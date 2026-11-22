@@ -111,7 +111,7 @@
     "id": "stream-ll-hls-b-frame-warning-20261119",
     "publishedAt": "2026-11-19",
     "titleJa": "StreamがLL-HLS配信のBフレーム検出時に警告",
-    "summaryJa": "低遅延HLSのライブ配信でBフレームが検出されると、Streamが警告ERR_LIVE_INPUT_LLHLS_INCOMPATIBLEをセッションごとに1回出すようになった。警告はライブ入力のLogsタブ、Webhook、GraphQLイベントで確認できる。対処は配信側でBフレームを切るか、低遅延HLSを無効にすること（後者は遅延が増える）。",
+    "summaryJa": "低遅延HLSのライブ配信でBフレームが検出されると、Streamが専用の警告をセッションごとに1回出すようになった。警告はライブ入力のLogsタブ、Webhook、GraphQLイベントで確認できる。対処は配信側でBフレームを切るか、低遅延HLSを無効にすること（後者は遅延が増える）。",
     "serviceIds": [
       "stream"
     ],
