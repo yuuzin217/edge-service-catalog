@@ -95,6 +95,27 @@
 | service | `images` | https://developers.cloudflare.com/images/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `stream` | https://developers.cloudflare.com/stream/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
 | service | `realtime` | https://developers.cloudflare.com/realtime/ | 一次確認 | 機能・利用目的の短い日本語説明。公式概要へアクセス済み、表現構成の詳細比較は未完了。 |
+| update | `agents-pi-16-tools-wait-20261120` | https://developers.cloudflare.com/changelog/post/2026-11-20-pi-harness-pi-1-6/ | 詳細対照 | SDK v0.34.0とPi 1.6、待機できるツールと既存履歴からのセッション開始、1.5へ戻せない注意を原典本文と照合。コード例は転載せず事実のみを独自要約。 |
+| update | `browser-run-script-endpoint-20261120` | https://developers.cloudflare.com/changelog/post/2026-11-20-script-endpoint/ | 詳細対照 | /scriptの2エンドポイント、Worker不要の実行方式とセッションが自動で閉じない注意を原典本文と照合。curl例は転載しない。 |
+| update | `images-hosted-delivery-analytics-20261120` | https://developers.cloudflare.com/changelog/post/2026-11-20-hosted-image-delivery-analytics/ | 詳細対照 | 最大30日の配信データ、絞り込み軸とSQL APIのデータセットを原典本文と照合。クエリ例は転載せず事実のみ記述。 |
+| update | `workers-for-platforms-dispatch-rename-removed-20261120` | https://developers.cloudflare.com/changelog/post/2026-11-20-dispatch-namespace-rename-removed/ | 詳細対照 | 改名拒否のエラーコード100413と移行手順の要点を原典本文と照合。手順の逐語転載はせず事実のみを独自要約。 |
+| update | `browser-run-snapshot-formats-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-snapshot-all-formats/ | 詳細対照 | 追加4形式、最低2形式の条件、json形式のWorkers AI利用と全体失敗の扱いを原典本文と照合。コード例は転載しない。 |
+| update | `durable-objects-runtime-update-reliability-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-durable-objects-runtime-update-reliability/ | 詳細対照 | 再起動時の合意グループ離脱によるリセット低減、全地域有効と再接続が依然必要な注意を原典本文と照合。 |
+| update | `images-gaussian-sharpening-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-configurable-sharpening/ | 詳細対照 | ガウシアン方式の追加とamount・sigma・thresholdの範囲を原典本文と照合。設定例は転載せず数値の事実のみ記述。 |
+| update | `r2-operations-requests-per-second-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-r2-requests-per-second/ | 詳細対照 | Class A/B操作のRPS表示切り替えを原典本文と照合。画面画像は転載しない。 |
+| update | `spectrum-dashboard-redesign-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-redesigned-dashboard/ | 詳細対照 | 画面刷新の内容と新規TCP/UDPアプリでIP Access Rulesが既定オフになる変更、既存設定不変を原典本文と照合。 |
+| update | `stream-ll-hls-b-frame-warning-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-ll-hls-b-frame-warning/ | 詳細対照 | 警告コードと通知先、対処の選択肢を原典本文と照合。事実のみを独自要約。 |
+| update | `waf-emergency-ruby-php-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-emergency-waf-release/ | 詳細対照 | Ruby新規検知のBlock、PHP既存検知の更新、Managed向け追加検知のLog/Blockを原典のルール表と照合。表は転載しない。 |
+| update | `workers-containers-inbound-tcp-grpc-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-inbound-tcp/ | 詳細対照 | Public Betaの明記、Spectrum経由の接続経路とPro/Businessの上限条件を原典本文と照合。図やコード例は転載しない。 |
+| update | `workers-pages-version-retention-20261119` | https://developers.cloudflare.com/changelog/post/2026-11-19-workers-pages-version-retention/ | 詳細対照 | 30日保持と直近100件・デプロイ中の例外、削除後のURL無効を原典本文と照合。 |
+| update | `access-saml-idp-certificate-discovery-20261118` | https://developers.cloudflare.com/changelog/post/2026-11-18-saml-idp-certificate-discovery/ | 詳細対照 | メタデータ取得の要件とキャッシュの注意（即時失効にならない）を原典本文と照合。設定JSON例は転載しない。 |
+| update | `hyperdrive-planetscale-startup-program-20261118` | https://developers.cloudflare.com/changelog/post/2026-11-18-hyperdrive-planetscale-startup-program/ | 詳細対照 | Startup Program向け提供とティア別のクレジット上限額を原典本文と照合。表は転載せず金額の事実のみ記述。 |
+| update | `hyperdrive-vpc-custom-ca-mtls-20261118` | https://developers.cloudflare.com/changelog/post/2026-11-18-hyperdrive-vpc-custom-ca-mtls/ | 詳細対照 | 独自CAとmTLSの対象、必要なツール版数とダッシュボード未対応を原典本文と照合。コマンド例は転載しない。 |
+| update | `images-consistent-interfaces-20261118` | https://developers.cloudflare.com/changelog/post/2026-11-18-consistent-optimization-interfaces/ | 詳細対照 | パラメーター構造の統一、従来記法の継続、border/drawのURL対応を原典本文と照合。図や設定例は転載しない。 |
+| update | `waf-emergency-java4shell-20261118` | https://developers.cloudflare.com/changelog/post/2026-11-18-emergency-waf-release/ | 詳細対照 | Java4Shell向け新規検知6件の対象とLog既定を原典のルール表と照合。表は転載しない。 |
+| update | `ai-search-file-summaries-20261117` | https://developers.cloudflare.com/changelog/post/2026-11-17-file-summaries/ | 詳細対照 | 3チャンク以上の条件、既定オフと再索引、LLM費用が別請求になる注意を原典本文と照合。 |
+| update | `images-tiff-input-20261117` | https://developers.cloudflare.com/changelog/post/2026-11-17-tiff-input-support/ | 詳細対照 | TIFF入力対応と複数ページは先頭のみという制限を原典本文と照合。事実のみを独自要約。 |
+| update | `artifacts-local-development-20261116` | https://developers.cloudflare.com/changelog/post/2026-11-16-local-artifacts-development/ | 詳細対照 | ローカルリポジトリの分離、イベント発生、WranglerとGitの要件を原典本文と照合。設定例は転載しない。 |
 | update | `browser-run-quick-actions-local-20261113` | https://developers.cloudflare.com/changelog/post/2026-11-13-quick-actions-local-dev/ | 詳細対照 | ローカル実行でquickActionが動く事実、jsonの仮データとKitesurf未対応の制限を原典本文と照合。コード例は転載せず事実のみを独自要約。 |
 | update | `ai-search-terraform-namespaces-20261113` | https://developers.cloudflare.com/changelog/post/2026-11-13-terraform-namespaces/ | 詳細対照 | v5.29.0のnamespace引数、import IDへの名前空間追加、データソースの必須化を原典本文と照合。設定例は転載しない。 |
 | update | `workers-durable-objects-spend-limits-20261113` | https://developers.cloudflare.com/changelog/post/2026-11-13-spend-management/ | 詳細対照 | WorkersとDurable Objectsの上限・通知設定、上限到達時の利用停止と反映遅延の注意を原典本文と照合。画面画像や図は転載しない。 |
@@ -107,6 +128,7 @@
 | update | `waf-ai-security-terraform-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-ai-security-for-apps-terraform/ | 詳細対照 | プロバイダーv5.29.0の2リソース名と役割を原典本文と照合。Terraform設定例は転載せず事実のみ記述。 |
 | update | `workers-ai-embeddinggemma-2-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-embeddinggemma-2-workers-ai/ | 詳細対照 | モデル名、768次元と多モーダル対応、次元縮小の選択肢と文脈長を原典本文と照合。コード例は転載しない。 |
 | update | `workers-ai-inkling-2-small-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-inkling-2-small-workers-ai/ | 詳細対照 | モデル名、MoE構成と文脈長、利用条件とレート上限の違いを原典本文と照合。宣伝表現は使わず事実のみ記述。 |
+| update | `waf-payload-logging-custom-rules-20261112` | https://developers.cloudflare.com/changelog/post/2026-11-12-custom-rules-payload-logging/ | 詳細対照 | カスタムルールへの対象拡大、Enterprise限定、公開鍵暗号化とゾーン優先、レート制限除外を原典本文と照合。 |
 | update | `access-leaked-service-token-20261111` | https://developers.cloudflare.com/changelog/post/2026-11-11-leaked-service-token-recovery/ | 詳細対照 | GitHub検出時の無効化と管理者通知、交換時の猶予なし、対象となる秘密形式の開始日を原典本文と照合。正規表現は転載しない。 |
 | update | `api-shield-web-assets-metric-views-20261111` | https://developers.cloudflare.com/changelog/post/2026-11-11-web-assets-metric-views/ | 詳細対照 | 指標別ビューの種類とサーバー側ソート対応を原典本文と照合。事実のみを独自の短文で記述。 |
 | update | `durable-objects-request-routing-20261111` | https://developers.cloudflare.com/changelog/post/2026-11-11-durable-objects-request-routing/ | 詳細対照 | 中継接続を省く手順変更とp99遅延改善の可能性、変更不要の点を原典本文と照合。事実のみを独自要約。 |

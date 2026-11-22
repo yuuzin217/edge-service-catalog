@@ -1,5 +1,259 @@
 [
   {
+    "id": "agents-pi-16-tools-wait-20261120",
+    "publishedAt": "2026-11-20",
+    "titleJa": "Agents SDKがPi 1.6に対応し、待機できるツールを追加",
+    "summaryJa": "Agents SDK v0.34.0でPiHarnessがPi 1.6になった。ツールが人や期限、別セッションからの信号を待つ間、Durable Objectを起こし続けずに休止できるようになり、既存の履歴からセッションを始めることもできる。Pi 1.6で動かした会話はPi 1.5へ戻せないため、更新時は前方修正が前提になる。",
+    "serviceIds": [
+      "agents"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-20-pi-harness-pi-1-6/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "browser-run-script-endpoint-20261120",
+    "publishedAt": "2026-11-20",
+    "titleJa": "Browser Runにカスタムスクリプト実行の/scriptを追加",
+    "summaryJa": "Browser Runに/scriptエンドポイントが加わり、PlaywrightやPuppeteer、CDPで書いた自動化スクリプトを1回のAPIリクエストで実行できるようになった。Workerをデプロイせずに済み、同じセッションへ続けてスクリプトを送ることもできる。セッションは自動では閉じないため、終了処理かアイドルタイムアウトに任せる必要がある。",
+    "serviceIds": [
+      "browser-run"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-20-script-endpoint/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "images-hosted-delivery-analytics-20261120",
+    "publishedAt": "2026-11-20",
+    "titleJa": "Imagesのホスト画像に配信アナリティクスを追加",
+    "summaryJa": "Imagesに保存した画像について、最大30日分の配信データを新しいアナリティクス画面で確認できるようになった。国やASN、リファラー、応答ステータス、ブラウザやOS、よく使われる画像とバリアントで絞り込める。同じデータはSQL APIのデータセットからも照会できる。",
+    "serviceIds": [
+      "images"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-20-hosted-image-delivery-analytics/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "workers-for-platforms-dispatch-rename-removed-20261120",
+    "publishedAt": "2026-11-20",
+    "titleJa": "Workers for Platformsのディスパッチ名前空間は改名不可に",
+    "summaryJa": "ディスパッチ名前空間は作成後に名前を変更できなくなった。APIやWrangler、Terraformで名前を変えようとするとエラー（コード100413）で拒否される。別の名前を使いたい場合は、新しい名前空間を作ってユーザーのWorkerを移し、ディスパッチWorkerのバインディングを更新してから旧名前空間を削除する手順になる。",
+    "serviceIds": [
+      "workers-for-platforms"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-20-dispatch-namespace-rename-removed/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "browser-run-snapshot-formats-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "Browser Runの/snapshotがPDFやJSONなど4形式を追加",
+    "summaryJa": "/snapshotが1回のページ読み込みでpdf、links、scrape、jsonも返せるようになった。従来のHTMLやスクリーンショットなどと合わせて、最低2形式を指定して使う。json形式はWorkers AIを使うため利用量が発生し、どれか1形式でも失敗するとリクエスト全体が失敗する。",
+    "serviceIds": [
+      "browser-run"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-snapshot-all-formats/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "durable-objects-runtime-update-reliability-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "Durable Objectsのランタイム更新時のストレージ信頼性を改善",
+    "summaryJa": "ランタイム更新でマシンが再起動する際、そのマシンがストレージの合意グループから先に外れるようになった。これにより書き込みの合意が取れずオブジェクトがリセットされる頻度が下がり得る。全地域で有効で利用者側の対応は不要だが、更新時にWebSocketが切れることは依然あり得るため再接続処理は必要。",
+    "serviceIds": [
+      "durable-objects"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-durable-objects-runtime-update-reliability/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "images-gaussian-sharpening-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "Imagesのsharpenにガウシアン方式を追加",
+    "summaryJa": "sharpenパラメーターで従来のボックス方式に加えてガウシアン方式を選べるようになった。強さ（amount 0〜10）、広がり（sigma 5以下）、しきい値（threshold 0〜255、任意）を指定でき、URL、Workersのcf.image、Imagesバインディングのいずれでも同じ構造で書ける。",
+    "serviceIds": [
+      "images"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-configurable-sharpening/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "r2-operations-requests-per-second-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "R2の操作メトリクスを秒間リクエスト数でも表示可能に",
+    "summaryJa": "R2バケットのMetrics画面で、Class AとClass Bの操作を件数だけでなく秒間リクエスト数（RPS）でも表示できるようになった。グラフ上の切り替えで表示を変えられ、トラフィックのピークを把握しやすくなる。",
+    "serviceIds": [
+      "r2"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-r2-requests-per-second/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "spectrum-dashboard-redesign-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "Spectrumのダッシュボードを刷新し、既定値も変更",
+    "summaryJa": "Spectrumの管理画面が刷新され、アプリケーションの一覧表示や作成・編集の導線が変わった。静的IPやBYOIPを使うアプリケーションも画面から作成・編集できる。注意点として、画面から新規作成したTCP/UDPアプリケーションではIP Access Rulesが既定でオフになり、APIの既定と揃った。既存のアプリケーションの設定は変わらない。",
+    "serviceIds": [
+      "spectrum"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-redesigned-dashboard/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "stream-ll-hls-b-frame-warning-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "StreamがLL-HLS配信のBフレーム検出時に警告",
+    "summaryJa": "低遅延HLSのライブ配信でBフレームが検出されると、Streamが専用の警告をセッションごとに1回出すようになった。警告はライブ入力のLogsタブ、Webhook、GraphQLイベントで確認できる。対処は配信側でBフレームを切るか、低遅延HLSを無効にすること（後者は遅延が増える）。",
+    "serviceIds": [
+      "stream"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-ll-hls-b-frame-warning/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "waf-emergency-ruby-php-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "WAF緊急リリースでRubyやPHP向け検知を追加・更新（2026-11-19）",
+    "summaryJa": "WAFの緊急リリースで、Rubyのヒープオーバーフロー等の新規検知がFreeとManagedの両ルールセットにBlockで追加され、PHPのリモートコード実行に関する既存検知も更新された。Managed向けにはPHP-FPMやPHP SOAPの検知（Log）や認証バイパス等の検知（Block）も追加されている。新規のPHP検知の一部は誤検知の恐れからLogで展開され、一致状況を見て上書きできる。",
+    "serviceIds": [
+      "waf"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-emergency-waf-release/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "workers-containers-inbound-tcp-grpc-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "WorkersへのTCP受信とContainersのgRPCがPublic Betaに",
+    "summaryJa": "Workersで外部からのTCP接続を受ける機能と、Containersで双方向gRPCを動かす機能がPublic Betaになった。接続はSpectrum経由でWorkerのconnect()ハンドラーに入り、Durable Objectを介してContainerのgRPCサーバーへつなげられる。Worker起点のSpectrumアプリケーションはProとBusinessのゾーンで使え、Spectrum Enterpriseがない場合はゾーンあたり1アプリケーション・1ポートまで。",
+    "serviceIds": [
+      "workers",
+      "containers"
+    ],
+    "type": "public-beta",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-inbound-tcp/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "workers-pages-version-retention-20261119",
+    "publishedAt": "2026-11-19",
+    "titleJa": "WorkersとPagesのバージョン保持期間が30日に",
+    "summaryJa": "WorkersのバージョンとPagesのデプロイは30日間保持され、それを過ぎると削除されるようになった。直近100件と現在デプロイ中のものは保持される。削除されたバージョンは画面やAPIから消え、バージョンURLやPagesのプレビューURLも使えなくなる。稼働中のアプリケーションとWorker Previewsは影響を受けない。",
+    "serviceIds": [
+      "workers",
+      "pages"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-19-workers-pages-version-retention/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "access-saml-idp-certificate-discovery-20261118",
+    "publishedAt": "2026-11-18",
+    "titleJa": "AccessがSAML IdPの署名証明書を自動取得可能に",
+    "summaryJa": "AccessがSAMLのIdPのメタデータエンドポイントから署名証明書を取得できるようになり、証明書の差し替えを手作業でアップロードし直す必要が減った。メタデータURLは認証なし・リダイレクトなしの公開HTTPSでSAMLメタデータXMLを返す必要がある。証明書はキャッシュされ定期取得はされないため、侵害された証明書をメタデータから消してもキャッシュや既存セッションは即時には無効にならない点に注意。",
+    "serviceIds": [
+      "access"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-18-saml-idp-certificate-discovery/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "hyperdrive-planetscale-startup-program-20261118",
+    "publishedAt": "2026-11-18",
+    "titleJa": "Hyperdrive経由のPlanetScaleがStartup Program参加者に開放",
+    "summaryJa": "Cloudflare Startup Programの参加者が、Cloudflare側からPlanetScaleのPostgresとMySQLデータベースを作れるようになった。利用料はCloudflareアカウントに請求され、PlanetScale分のクレジット上限はプログラムのティアごとに異なる（Tier 3は2,500ドル、Tier 2は10,000ドル、Tier 1は50,000ドル）。対象アカウントではHyperdriveの画面に作成ボタンが表示される。",
+    "serviceIds": [
+      "hyperdrive"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-18-hyperdrive-planetscale-startup-program/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "hyperdrive-vpc-custom-ca-mtls-20261118",
+    "publishedAt": "2026-11-18",
+    "titleJa": "HyperdriveがWorkers VPC経由で独自CAとmTLSに対応",
+    "summaryJa": "HyperdriveからWorkers VPC経由でプライベートなデータベースへ接続する際、独自のCAによる証明書検証とクライアント証明書によるmTLS認証を使えるようになった。民間のCAやRDSのCAバンドルで署名されたPostgreSQLやAmazon RDSが対象で、Access経由に迂回する必要がなくなる。設定はWrangler 4.164.0以降、API、Terraformプロバイダー5.29.0以降から行い、ダッシュボードにはまだ対応していない。",
+    "serviceIds": [
+      "hyperdrive"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-18-hyperdrive-vpc-custom-ca-mtls/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "images-consistent-interfaces-20261118",
+    "publishedAt": "2026-11-18",
+    "titleJa": "ImagesのURLとcf.imageでパラメーター構造を統一",
+    "summaryJa": "Imagesの変換URLとWorkersのcf.imageで、パラメーターの書き方が統一された。設定を持つ最適化は最上位パラメーターの下に設定を入れ子で書く形になり、従来の書き方も引き続き動く。これまでWorkers側だけだった枠線（border）と重ね合わせ（draw）が、URLインターフェースでも使えるようになった。",
+    "serviceIds": [
+      "images"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-18-consistent-optimization-interfaces/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "waf-emergency-java4shell-20261118",
+    "publishedAt": "2026-11-18",
+    "titleJa": "WAF緊急リリースでJava4Shell向け検知をLogで追加（2026-11-18）",
+    "summaryJa": "Managed Rulesetの緊急リリースで、Java4Shell（CVE-2026-114938）に関する新規検知6件が追加された。いずれも不正なbase64を対象とし、ヘッダーやクエリ、本文、パス、JWT、WebAuthnの値などが対象になる。誤検知の恐れがあるため既定はLogで、必要に応じて上書きできる。",
+    "serviceIds": [
+      "waf"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-18-emergency-waf-release/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "ai-search-file-summaries-20261117",
+    "publishedAt": "2026-11-17",
+    "titleJa": "AI Searchが索引化時にファイル要約を生成可能に",
+    "summaryJa": "AI Searchで、索引化の際にテキスト文書の要約・話題・キーワードをLLMで生成する設定が加わった。対象は3チャンク以上になる文書で、要約とキーワードはメタデータに、話題はチャンクのヘッダーに記録される。既定はオフで、有効化すると全体の再索引が発生する。LLMの費用はAI Searchの取り込み枠とは別にWorkers AIの利用として請求される。",
+    "serviceIds": [
+      "ai-search"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-17-file-summaries/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "images-tiff-input-20261117",
+    "publishedAt": "2026-11-17",
+    "titleJa": "ImagesがTIFF形式の入力に対応",
+    "summaryJa": "Imagesが入力形式としてTIFFを受け付けるようになった。原画を変えずに、WebPやAVIFなどへ変換したりサイズを変えたりして配信できる。複数ページのTIFFは先頭ページだけが読み込まれる点に注意。通常のサイズ上限がそのまま適用される。",
+    "serviceIds": [
+      "images"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-17-tiff-input-support/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
+    "id": "artifacts-local-development-20261116",
+    "publishedAt": "2026-11-16",
+    "titleJa": "Artifactsをローカル開発で利用可能に",
+    "summaryJa": "Artifactsのリポジトリをローカル環境で作成・テストできるようになった。Gitリポジトリの取り込みやリポジトリトークンの発行、Gitでのクローンやプッシュも手元で行え、ローカルのリポジトリはデプロイ済みのものとは分離されるため本番データに影響しない。リポジトリの作成や削除などのイベントも本番と同様に発生する。利用には最新のWranglerとGit 2.32以降が要る。",
+    "serviceIds": [
+      "artifacts"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-16-local-artifacts-development/",
+    "verifiedAt": "2026-11-23"
+  },
+  {
     "id": "browser-run-quick-actions-local-20261113",
     "publishedAt": "2026-11-13",
     "titleJa": "Browser RunのQuick Actionsをローカル開発で実行可能に",
@@ -144,6 +398,18 @@
     "type": "service-update",
     "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-inkling-2-small-workers-ai/",
     "verifiedAt": "2026-11-16"
+  },
+  {
+    "id": "waf-payload-logging-custom-rules-20261112",
+    "publishedAt": "2026-11-12",
+    "titleJa": "WAFのペイロードロギングがカスタムルールにも対応",
+    "summaryJa": "WAFでルールに一致したリクエスト内容を記録するペイロードロギングが、マネージドルールに加えてカスタムルールでも使えるようになった。対象はEnterpriseの顧客で、記録は利用者が設定した公開鍵で暗号化される。鍵はアカウント単位とゾーン単位で設定でき、両方ある場合はゾーン側が優先される。レート制限ルールは今回の対象に含まれない。",
+    "serviceIds": [
+      "waf"
+    ],
+    "type": "service-update",
+    "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-11-12-custom-rules-payload-logging/",
+    "verifiedAt": "2026-11-23"
   },
   {
     "id": "access-leaked-service-token-20261111",
